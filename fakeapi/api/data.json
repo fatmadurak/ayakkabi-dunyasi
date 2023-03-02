@@ -1,0 +1,268 @@
+{
+    "products": [
+      {
+        "id":1,
+        "title": "Eclipse",
+        "category":1,
+        "description": "Kahve Kadın Terlik",
+        "price": "289",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105969_eclipse-kahve-kadin-terlik-4358182001020.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105970_eclipse-kahve-kadin-terlik-4358182001020.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105972_eclipse-kahve-kadin-terlik-4358182001020.jpeg"
+    ]},
+  
+          {
+        "id":2,
+        "title": "Provoq",
+        "category":1,
+        "description": "Mavi Kadın Terlik",
+        "price": "1299",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150016_provoq-mavi-kadin-terlik-4141k30050100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150017_provoq-mavi-kadin-terlik-4141k30050100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150018_provoq-mavi-kadin-terlik-4141k30050100.jpeg"
+     ] },
+          {
+        "id":3,
+        "title": "Buckhead",
+        "category":1,
+        "description": "Turkuaz Kadın Terlik",
+        "price": "179",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131803_buckhead-turkuaz-kadin-terlik-4686415410100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131804_buckhead-turkuaz-kadin-terlik-4686415410100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131805_buckhead-turkuaz-kadin-terlik-4686415410100.jpeg"
+     ] },
+           {
+        "id":4,
+        "title": "Provoq",
+        "category":1,
+        "description": "Vizon Kadın Terlik",
+        "price": "650",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150498_provoq-vizon-kadin-terlik-40291260101110.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150499_provoq-vizon-kadin-terlik-40291260101110.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150500_provoq-vizon-kadin-terlik-40291260101110.jpeg"
+    ]},    
+      {
+        "id":5,
+        "title": "Provoq",
+        "category":2,
+        "description": "Siyah Kadın Bot",
+        "price": "300",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0115821_provoq-siyah-kadin-bot-4498221770100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0109946_provoq-siyah-kadin-bot-4498221770100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0109947_provoq-siyah-kadin-bot-4498221770100.jpeg"
+     ] },
+  
+         {
+        "id":6,
+        "title": "Eclipse",
+        "category":2,
+        "description": "Taba Deri Kadın Bot",
+        "price": "800",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0136161_eclipse-taba-deri-kadin-bot-4783p17301100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0136162_eclipse-taba-deri-kadin-bot-4783p17301100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0136163_eclipse-taba-deri-kadin-bot-4783p17301100.jpeg"
+     ] },
+  
+        {
+        "id":7,
+        "title": "Provoq ",
+        "category":2,
+        "description": "Vizon Deri Kadın Bot",
+        "price": "890",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0137891_provoq-vizon-deri-kadin-bot-4498221380210.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0137892_provoq-vizon-deri-kadin-bot-4498221380210.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0137893_provoq-vizon-deri-kadin-bot-4498221380210.jpeg"
+    ]},
+    
+         {
+        "id":8,
+        "title": "Provoq ",
+        "category":2,
+        "description": "Siyah Deri Kadın Asker Botu",
+        "price": "899",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0146473_provoq-siyah-deri-kadin-asker-botu-4262mrz855900.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0146474_provoq-siyah-deri-kadin-asker-botu-4262mrz855900.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0146475_provoq-siyah-deri-kadin-asker-botu-4262mrz855900.jpeg"
+     ] },
+    {
+        "id":9,
+        "title": "Provoq ",
+        "category":2,
+        "description": "Kahve Deri Kadın Bot",
+        "price": "999",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141442_provoq-kahve-deri-kadin-bot-4498a2213200.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141443_provoq-kahve-deri-kadin-bot-4498a2213200.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141444_provoq-kahve-deri-kadin-bot-4498a2213200.jpeg"
+     ] },
+  
+    {
+        "id":10,
+        "title": "adidas",
+        "category":3,
+        "description": "Beyaz Unisex Spor Ayakkabı",
+        "price": "699",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141632_adidas-tensaur-sport-2-0-beyaz-unisex-spor-ayakkabi-gw1987-2008gw1987.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141633_adidas-tensaur-sport-2-0-beyaz-unisex-spor-ayakkabi-gw1987-2008gw1987.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141634_adidas-tensaur-sport-2-0-beyaz-unisex-spor-ayakkabi-gw1987-2008gw1987.jpeg"
+     ] },
+  
+    {
+        "id":11,
+        "title": "adidas",
+        "category":3,
+        "description": "Siyah Kadın Spor Ayakkabı",
+        "price": "699",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126773_adidas-puremotion-siyah-kadin-ayakkabi-gx5637-2008gx5637.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126774_adidas-puremotion-siyah-kadin-ayakkabi-gx5637-2008gx5637.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126775_adidas-puremotion-siyah-kadin-ayakkabi-gx5637-2008gx5637.jpeg"
+    ]},
+    {
+        "id":12,
+        "title": "adidas",
+        "category":3,
+        "description": "Lego Beyaz Erkek Spor Ayakkabı",
+        "price": "1699",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0139920_adidas-racer-lego-beyaz-unisex-spor-ayakkabi-gx2240-2008gx2240.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0139921_adidas-racer-lego-beyaz-unisex-spor-ayakkabi-gx2240-2008gx2240.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0139922_adidas-racer-lego-beyaz-unisex-spor-ayakkabi-gx2240-2008gx2240.jpeg"
+     ] },
+    {
+        "id":13,
+        "title": "Joma J.Sima ",
+        "category":3,
+        "description": "Çocuk Spor Ayakkabı",
+        "price": "699",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141347_joma-j-sima-2203-multi-cocuk-spor-ayakkabi-jsimaw2203v-2025jsimaw2203v.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141348_joma-j-sima-2203-multi-cocuk-spor-ayakkabi-jsimaw2203v-2025jsimaw2203v.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141349_joma-j-sima-2203-multi-cocuk-spor-ayakkabi-jsimaw2203v-2025jsimaw2203v.jpeg"
+    ]},
+    {
+        "id":14,
+        "title": "Provoq",
+        "category":4,
+        "description": "Kahve Deri Erkek Ayakkabı",
+        "price": "2699",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149213_provoq-kahve-deri-erkek-ayakkabi-5090j60600110.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149214_provoq-kahve-deri-erkek-ayakkabi-5090j60600110.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149215_provoq-kahve-deri-erkek-ayakkabi-5090j60600110.jpeg"
+    ]},  {
+        "id":15,
+        "title": "Provoq",
+        "category":4,
+        "description": "Siyah Deri Erkek Ayakkabı",
+        "price": "2399",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149218_provoq-siyah-deri-erkek-ayakkabi-5090j60701000.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149219_provoq-siyah-deri-erkek-ayakkabi-5090j60701000.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0149220_provoq-siyah-deri-erkek-ayakkabi-5090j60701000.jpeg"
+     ] },
+  {
+        "id":16,
+        "title": "Provoq",
+        "category":4,
+        "description": "Kahve Erkek Ayakkabı",
+        "price": "399",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0140936_eski-sezon-kahve-erkek-ayakkabi-5255777190600.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0140937_eski-sezon-kahve-erkek-ayakkabi-5255777190600.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0140938_eski-sezon-kahve-erkek-ayakkabi-5255777190600.jpeg"
+     ] },
+  {
+        "id":17,
+        "title": "Provoq",
+        "category":4,
+        "description": "Siyah Deri Erkek Ayakkabı",
+        "price": "799",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131525_provoq-siyah-deri-erkek-ayakkabi-5003a13070100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131526_provoq-siyah-deri-erkek-ayakkabi-5003a13070100.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0131527_provoq-siyah-deri-erkek-ayakkabi-5003a13070100.jpeg"
+     ] },
+  {
+        "id":18,
+        "title": "Skechers Proven Renco",
+        "category":4,
+        "description": "Bej Erkek Sneaker ",
+        "price": "1799",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126995_skechers-bej-204568tpe-proven-renco-2080204568tpe.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126996_skechers-bej-204568tpe-proven-renco-2080204568tpe.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126997_skechers-bej-204568tpe-proven-renco-2080204568tpe.jpeg"
+     ] },
+  {
+        "id":19,
+        "title": "Nike",
+        "category":3,
+        "description": " Siyah Erkek Çocuk Sneaker ",
+        "price": "799",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0103036_nike-bq5453-007-nike-court-borough-low-2-tdv-2000bq5453007.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0103037_nike-bq5453-007-nike-court-borough-low-2-tdv-2000bq5453007.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0103038_nike-bq5453-007-nike-court-borough-low-2-tdv-2000bq5453007.jpeg"
+      ]  },
+  
+  {
+        "id":20,
+        "title": "Nike",
+        "category":3,
+        "description": "Gri Kız Çocuk Sneaker  ",
+        "price": "799",
+        "images": [
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0102290_nike-cn8560-014-nike-md-valiant-tdv-2000cn8560014.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0102291_nike-cn8560-014-nike-md-valiant-tdv-2000cn8560014.jpeg",
+          "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0102292_nike-cn8560-014-nike-md-valiant-tdv-2000cn8560014.jpeg"
+      
+    ]}],
+       "users": [
+      {
+        "id": 1,
+        "email": "atuny0@sohu.com",
+        "password": "9uQFF1Lh",
+        "role": "user"
+      },
+     {
+        "id": 2,
+        "email": "fatmabadilli6342@gmail.com",
+        "password": "12345",
+        "role": "user"
+      },
+      {
+        "id": 3,
+        "email": "admin@admin.com",
+        "password": "12345",
+        "role": "admin"
+      }
+       ],
+  
+      "orders": [
+      {
+        "id":1,
+        "address": "Fetih Mahallesi/Konya"
+          
+      },
+    {
+        "id":2,
+        "address": "Nalçacı Mahallesi/Konya"
+          
+      }
+   
+       ]
+       
+    }
+  
+       
+      
