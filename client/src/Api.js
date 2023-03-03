@@ -12,7 +12,7 @@ return data;
 
 const CategoryTerlik=async()=>{
 
-const data=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
+const data= await FetchProductList()
 const terlikData= data.filter((item)=>item.category===1)
 
 return terlikData;
@@ -21,7 +21,7 @@ return terlikData;
 
 const CategoryBot=async()=>{
 
-    const data=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
+    const data= await FetchProductList()
     const botData= data.filter((item)=>item.category===2)
     
     return botData;
@@ -30,7 +30,7 @@ const CategoryBot=async()=>{
 
  const CategorySporAyakkabi=async()=>{
 
-      const data=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
+      const data= await FetchProductList()
       const sporAyakkabiData= data.filter((item)=>item.category===3)
         
      return sporAyakkabiData;
@@ -40,7 +40,7 @@ const CategoryBot=async()=>{
         
  const ClassicAyakkabi=async()=>{
 
-     const data=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
+     const data= await FetchProductList()
      const ClassicAyakkabiData= data.filter((item)=>item.category===4)
               
      return ClassicAyakkabiData;

@@ -3,7 +3,9 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-
+import Products from "./Pages/Products/index"
+import ProductDetail from "./Pages/ProductDetail";
+import Connection from "./Pages/Connection";
  function App() {
 
  const [showScroll,setShowScroll]=useState(false);
@@ -34,8 +36,9 @@ const scrollTop = () =>{
      <Navbar/>
         <Routes>
         <Route path="/" exact  element={<Home/>}/>
-
-       
+        <Route path="/products" exact  element={<Products/>}/>
+        <Route path="/products/:product_id" exact  element={<ProductDetail/>}/>
+        <Route path="/iletisim" exact  element={<Connection/>}/>
         </Routes>
        
 
