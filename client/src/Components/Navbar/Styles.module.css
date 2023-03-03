@@ -1,0 +1,76 @@
+
+.nav{
+
+    background-color:rgb(83, 11, 83);
+    margin: 0 auto;
+
+
+}
+.container{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 20px;
+
+
+}
+
+
+.left{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.logo{
+
+cursor: pointer;
+border: 3px solid goldenrod;
+border-radius: 10px;
+
+
+}
+.menu{
+
+display: flex;
+align-items: center;
+justify-content: center;
+list-style: none;
+gap:40px
+
+}
+
+ul li a{
+
+text-decoration:none ;
+font-weight: 550;
+color: goldenrod;
+
+
+}
+ul li a:hover{
+
+color: white;
+cursor: pointer;
+
+}
+
+
+
+.list:hover{
+
+    color: goldenrod;
+    cursor: pointer;
+
+}
+
+.material-symbols-outlined{
+
+
+padding-right: 3px;
+
+}
