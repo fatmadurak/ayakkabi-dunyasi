@@ -36,7 +36,7 @@ const scrollTop = () =>{
      <Navbar/>
         <Routes>
         <Route path="/" exact  element={<Home/>}/>
-        <Route path="/products" exact  element={<Products/>}/>
+        <Route path="/products/*" exact  element={<Products/>}/>
         <Route path="/products/:product_id" exact  element={<ProductDetail/>}/>
         <Route path="/iletisim" exact  element={<Connection/>}/>
         </Routes>
