@@ -3,13 +3,18 @@ import { Box,Text,Image,Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 function Card({item}) {
+
+
+
+ 
+
   return (
     <>
     
-    <Box>
+    <Box p="5px" overflow="hidden" borderRadius="3xl" borderWidth="1px" >
     
     <Link to={`/products/${item.id}`}> 
-    <Image src={item.image} alt='CardImage' />
+    <Image src={item.images[0]} alt='CardImage'  width={300} height={370} />
     </Link>
    
     <Box>
@@ -21,19 +26,19 @@ function Card({item}) {
      </Box>
      <Box>
 
-    <Text fontSize='xl'>{item.description}</Text>
+    <Text fontSize='md'>{item.description}</Text>
 
      </Box>
 
      <Box>
 
-    <Text fontSize='xl'>{item.price}TL</Text>
+    <Text fontSize='3xl'>{item.price}TL</Text>
 
     </Box>
     </Box>
 
      
-    <Button colorScheme='purple' variant='solid' >
+    <Button colorScheme='purple' variant='solid' mt={5} >
        Sepete Ekle
     </Button>
  

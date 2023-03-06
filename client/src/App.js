@@ -3,14 +3,13 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products/index"
+import Products from "./Pages/AllProducts/Products"
 import ProductDetail from "./Pages/ProductDetail";
 import Connection from "./Pages/Connection";
-import AllProducts from "./Pages/Products/AllProducts"
-import Terlik from "./Pages/Products/Terlik"
-import Bot from "./Pages/Products/Bot"
-import KlasikAyakkabi from "./Pages/Products/KlasikAyakkabi"
-import SporAyakkabi from "./Pages/Products/SporAyakkabi"
+import Terlik from "./Pages/AllProducts/Terlik"
+import Bot from "./Pages/AllProducts/Bot"
+import KlasikAyakkabi from "./Pages/AllProducts/KlasikAyakkabi"
+import SporAyakkabi from "./Pages/AllProducts/SporAyakkabi"
  function App() {
 
  const [showScroll,setShowScroll]=useState(false);
@@ -39,19 +38,23 @@ const scrollTop = () =>{
     <Router>
     
      <Navbar/>
-        <Routes>
+       
+
+       <div className="content">
+       <Routes>
         <Route path="/" exact  element={<Home/>}/>
         <Route path="/products" exact  element={<Products/>}/>
         <Route path="/products/:id" exact  element={<ProductDetail/>}/>
         <Route path="/iletisim" exact  element={<Connection/>}/>
 
-        <Route path="products/allProducts" element={<AllProducts/>}/>
+     
       <Route path="products/terlik" element={<Terlik/>}/>
       <Route path="products/bot" element={<Bot/>}/>
       <Route path="products/klasikAyakkabi" element={<KlasikAyakkabi/>}/>
       <Route path="products/sporAyakkabi" element={<SporAyakkabi/>}/>
         </Routes>
        
+       </div>
 
   
 

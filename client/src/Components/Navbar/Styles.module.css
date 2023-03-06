@@ -1,9 +1,14 @@
 
 .nav{
 
-    background-color:rgb(83, 11, 83);
-    margin: 0 auto;
+   background: linear-gradient(#838183, #c5c5d1);
+   width: 100%;
 
+   border-radius: 20px;
+   position: fixed;
+   z-index: 999;
+   top:0;
+   box-shadow: #838183;
 
 }
 .container{
@@ -11,7 +16,7 @@
 display: flex;
 justify-content: space-around;
 align-items: center;
-padding: 20px;
+padding: 40px;
 
 
 }
