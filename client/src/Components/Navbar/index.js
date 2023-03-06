@@ -2,7 +2,14 @@ import React from 'react'
 import Styles from './Styles.module.css';
 import logo from "../../assets/Logo.jpg"
 import { Link } from 'react-router-dom';
-import { Button,Box,Text } from '@chakra-ui/react';
+import { Button,Box,Text,  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider } from '@chakra-ui/react';
 
 
 function Navbar() {
@@ -32,7 +39,17 @@ function Navbar() {
         </li>
 
         <li>
-        <Link><Text  fontSize='md'>Kategoriler</Text></Link>
+        <Menu >
+     <MenuButton as={Button} style={{background:"goldenrod"}}>
+      Kategori
+     </MenuButton>
+    <MenuList>
+    <MenuItem><Link to={"products/terlik"}>Terlik</Link></MenuItem>
+    <MenuItem><Link to={"products/sporAyakkabi"}>Spor Ayakkabı</Link></MenuItem>
+    <MenuItem><Link to={"products/bot"}>Bot</Link></MenuItem>
+    <MenuItem><Link to={"products/klasikAyakkabi"}>Klasik Ayakkabı</Link></MenuItem>
+    </MenuList>
+   </Menu>
         </li>
    
         </ul>

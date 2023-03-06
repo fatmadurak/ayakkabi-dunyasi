@@ -2,15 +2,15 @@ import axios from "axios"
 
 
 
-const FetchProductList=async()=>{
+ export const FetchProductList=async()=>{
 
 const {data}=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
-
+console.log(data)
 return data;
 }
 
 
-const CategoryTerlik=async()=>{
+export const CategoryTerlik=async()=>{
 
 const data=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
 const terlikData= data.filter((item)=>item.category===1)
@@ -19,7 +19,7 @@ return terlikData;
 
 }
 
-const CategoryBot=async()=>{
+export const CategoryBot=async()=>{
 
     const data= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
     const botData= data.filter((item)=>item.category===2)
@@ -28,7 +28,7 @@ const CategoryBot=async()=>{
     
     }
 
- const CategorySporAyakkabi=async()=>{
+    export const CategorySporAyakkabi=async()=>{
 
       const data= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
       const sporAyakkabiData= data.filter((item)=>item.category===3)
@@ -38,7 +38,7 @@ const CategoryBot=async()=>{
         }
 
         
- const ClassicAyakkabi=async()=>{
+        export const ClassicAyakkabi=async()=>{
 
      const data= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
      const ClassicAyakkabiData= data.filter((item)=>item.category===4)
