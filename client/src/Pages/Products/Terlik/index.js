@@ -24,11 +24,11 @@ function Terlik() {
 
   if (terlikData.length < 1) return "Loading...";
 
-  console.log(terlikData)
+  
 
   return (
     <>
- <Grid templateColumns="repeat(4,1fr)">
+ <Grid templateColumns="repeat(4,1fr)" mt={20}>
  
 
  {  terlikData && terlikData.map((item)=>{
@@ -45,21 +45,13 @@ function Terlik() {
     })
 
 
-
-
-
-
-
-
-
-
  }
 
 
 
  </Grid>
     
-    
+
     
     </>
   )
