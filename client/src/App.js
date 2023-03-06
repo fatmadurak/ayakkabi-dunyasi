@@ -10,28 +10,28 @@ import Terlik from "./Pages/AllProducts/Terlik"
 import Bot from "./Pages/AllProducts/Bot"
 import KlasikAyakkabi from "./Pages/AllProducts/KlasikAyakkabi"
 import SporAyakkabi from "./Pages/AllProducts/SporAyakkabi"
+import { ArrowUpIcon } from "@chakra-ui/icons";
  function App() {
 
- const [showScroll,setShowScroll]=useState(false);
+  const [showButton, setShowButton] = useState(false);
 
-useEffect(()=>{
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
 
-
-  const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 300){
-      setShowScroll(true)
-    } else if (showScroll && window.pageYOffset <= 300){
-      setShowScroll(false)
-    }
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
   };
-
-
-
-},[])
-
-const scrollTop = () =>{
-  window.scrollTo({top: 0, behavior: 'smooth'});
-};
 
   return (
     <>
@@ -65,7 +65,23 @@ const scrollTop = () =>{
           
             <>
         
-            <i className='fas fa-caret-square-up' style={{fontSize:"106px",color:"purple",position:"fixed"}} onClick={scrollTop}/>
+           {showButton && (
+
+          
+            
+            <button onClick={scrollToTop} className="back-to-top">
+            <ArrowUpIcon mb="0.5" ml="0.5" />
+            Yukarı Çık
+          </button>
+         
+
+
+
+
+
+           )  }
+
+          
 
      
            

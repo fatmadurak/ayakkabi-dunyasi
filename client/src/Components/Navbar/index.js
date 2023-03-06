@@ -22,7 +22,7 @@ function Navbar() {
 
       <div className={Styles.logo}>
         
-      <Link to={"/"}> <img src={logo} alt="logo"  width={150}/></Link>
+      <Link to={"/"}> <img src={logo} alt="logo"  width={120}/></Link>
 
       </div>
 
