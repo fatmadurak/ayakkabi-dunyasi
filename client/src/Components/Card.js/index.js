@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box,Text,Image,Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import "../../../src/App.css"
 
 function Card({item}) {
 
@@ -14,7 +15,7 @@ function Card({item}) {
     <Box p="5px" overflow="hidden" borderRadius="3xl" borderWidth="1px" >
     
     <Link to={`/products/${item.id}`}> 
-    <Image src={item.images[0]} alt='CardImage'  width={300} height={370} />
+    <Image className='imageCard' src={item.images[0]} alt='CardImage'  width={300} height={370} />
     </Link>
    
     <Box>

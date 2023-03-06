@@ -61,18 +61,18 @@ const scrollTop = () =>{
 
      
        {
-          showScroll &&
+     
           
-          (  <>
+            <>
         
-            <i className='fas fa-caret-square-up' style={{fontSize:"76px",color:"purple"}} onClick={scrollTop}/>
+            <i className='fas fa-caret-square-up' style={{fontSize:"106px",color:"purple",position:"fixed"}} onClick={scrollTop}/>
 
      
            
           
             </>
-          )
-     
+          
+    
        }
      
 

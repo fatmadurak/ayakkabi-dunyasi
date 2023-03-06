@@ -15,7 +15,7 @@ function AllProducts() {
    <>
    <Box>
    
-   <Grid templateColumns="repeat(4,1fr)"  gap={10} mt="250" >
+   <Grid templateColumns="repeat(4,1fr)"  gap={10} mt="280" >
    
    {
          data.map((item,key) =>(<Card item={item} key={item.id}/>)
