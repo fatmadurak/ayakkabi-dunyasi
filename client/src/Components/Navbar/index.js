@@ -22,7 +22,7 @@ function Navbar() {
 
       <div className={Styles.logo}>
         
-        <img src={logo} alt="logo"  width={200}/>
+      <Link to={"/"}> <img src={logo} alt="logo"  width={200}/></Link>
 
       </div>
 
@@ -35,7 +35,7 @@ function Navbar() {
         </li>
        
         <li>
-          <Link to={"/products"}><Text  fontSize='md'>Ürünler</Text></Link>
+          <Link to={"/products/allProducts"}><Text  fontSize='md'>Ürünler</Text></Link>
         </li>
 
         <li>

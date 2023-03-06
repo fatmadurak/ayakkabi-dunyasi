@@ -1,13 +1,16 @@
-import React,{useEffect, useState}from 'react'
+import React,{useState,useEffect}from 'react'
 import { CategoryTerlik } from '../../../Api.js';
 import Card from '../../../Components/Card.js';
 
+
 import {Box, Grid} from "@chakra-ui/react"
+
+
 function Terlik() {
 
-  const [terlikData,setTerlikData]=useState([]);
+ const[terlikData,setTerlikData]=useState([])
 
-  useEffect(()=>{
+ useEffect(()=>{
 
  (async()=>{
 
@@ -16,15 +19,13 @@ function Terlik() {
   setTerlikData(data)
 
 
-
  })()
+ 
 
 
-  },[])
 
-  if (terlikData.length < 1) return "Loading...";
+ },[])
 
-  
 
   return (
     <>

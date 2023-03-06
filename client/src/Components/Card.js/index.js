@@ -2,7 +2,7 @@ import React from 'react'
 import { Box,Text,Image,Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-function Card(item) {
+function Card({item}) {
   return (
     <>
     
