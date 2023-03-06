@@ -4,12 +4,12 @@ import './App.css';
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Products from "./Pages/AllProducts/Products"
-import ProductDetail from "./Pages/ProductDetail";
+import ProductDetail from "./Pages/AllProducts/Products/ProductDetail";
 import Connection from "./Pages/Connection";
 import Terlik from "./Pages/AllProducts/Terlik"
-import Bot from "./Pages/AllProducts/Bot"
-import KlasikAyakkabi from "./Pages/AllProducts/KlasikAyakkabi"
-import SporAyakkabi from "./Pages/AllProducts/SporAyakkabi"
+import Bot from "./Pages/AllProducts/Products/Bot"
+import KlasikAyakkabi from "./Pages/AllProducts/Products/KlasikAyakkabi"
+import SporAyakkabi from "./Pages/AllProducts/Products/SporAyakkabi"
 import { ArrowUpIcon } from "@chakra-ui/icons";
  function App() {
 
@@ -42,16 +42,16 @@ import { ArrowUpIcon } from "@chakra-ui/icons";
 
        <div className="content">
        <Routes>
-        <Route path="/" exact  element={<Home/>}/>
-        <Route path="/products" exact  element={<Products/>}/>
+        <Route path="/" exact element={<Home/>}/>
+        <Route path="/products"  element={<Products/>}/>
         <Route path="/products/:id" exact  element={<ProductDetail/>}/>
         <Route path="/iletisim" exact  element={<Connection/>}/>
 
      
-      <Route path="products/terlik" element={<Terlik/>}/>
-      <Route path="products/bot" element={<Bot/>}/>
-      <Route path="products/klasikAyakkabi" element={<KlasikAyakkabi/>}/>
-      <Route path="products/sporAyakkabi" element={<SporAyakkabi/>}/>
+        <Route path="/terlik" element={<Terlik/>}/>
+        <Route path="/bot" element={<Bot/>}/>
+        <Route path="/klasikAyakkabi" element={<KlasikAyakkabi/>}/>
+        <Route path="/sporAyakkabi" element={<SporAyakkabi/>}/>
         </Routes>
        
        </div>

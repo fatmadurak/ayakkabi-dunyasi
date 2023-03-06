@@ -12,10 +12,10 @@ function Card({item}) {
   return (
     <>
     
-    <Box p="5px" overflow="hidden" borderRadius="3xl" borderWidth="1px" >
+    <Box p="5px" overflow="hidden" borderRadius="xl" borderWidth="1px"  className='imageCard'>
     
     <Link to={`/products/${item.id}`}> 
-    <Image className='imageCard' src={item.images[0]} alt='CardImage'  width={300} height={370} />
+    <Image  src={item.images[0]} alt='CardImage'  width={300} height={320} border="xl" />
     </Link>
    
     <Box>

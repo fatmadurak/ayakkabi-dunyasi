@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './Styles.module.css';
-import logo from "../../assets/Logo.jpg"
+import logo from "../../assets/logo.jpg"
 import { Link } from 'react-router-dom';
 import { Button,Box,Text,  Menu,
   MenuButton,

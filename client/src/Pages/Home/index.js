@@ -9,7 +9,7 @@ function Home() {
   return (
   <>
   
-   <Grid templateColumns="repeat(6,1fr)"mt={10} gap={20}> 
+   <Grid templateColumns="repeat(6,1fr)"> 
   
     <Box className='box'>
    

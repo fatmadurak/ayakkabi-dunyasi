@@ -1,11 +1,11 @@
 
 .nav{
 
-   background: linear-gradient(#838183, #c5c5d1);
+   background: linear-gradient(#faf9fa, #f9f9fc);
    width: 100%;
    border-radius: 20px;
    position: fixed;
-   z-index: 999;
+   z-index: 1;
    height: 20%;
    top:0;
    box-shadow: 20px 20px 50px grey;
@@ -34,9 +34,8 @@ padding: 40px;
 .logo{
 
 cursor: pointer;
-border: 3px solid goldenrod;
-border-radius: 10px;
 
+border-radius: 0px;
 
 }
 .menu{
@@ -59,7 +58,7 @@ color: goldenrod;
 }
 ul li a:hover{
 
-color: white;
+color:rgb(193, 183, 202);
 cursor: pointer;
 
 }
