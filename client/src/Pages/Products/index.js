@@ -1,8 +1,11 @@
 import React from 'react'
 import {  useQuery } from 'react-query'
-import { FetchProductList } from '../../../Api'
+
 import { Box,Grid } from '@chakra-ui/react'
-import Card from "../../../Components/Card.js"
+import {FetchProductList} from "../../Api"
+import  Card  from "../../Components/Card.js"
+
+
 function AllProducts() {
   const { isLoading, error, data } = useQuery("products",FetchProductList)
   
@@ -15,7 +18,7 @@ function AllProducts() {
    <>
    <Box>
    
-   <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="280" >
+   <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="280" justifyContent="center" alignItems="center" >
    
    {
          data.map((item,key) =>(<Card item={item} key={item.id}/>)

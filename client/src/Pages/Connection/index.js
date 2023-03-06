@@ -1,14 +1,18 @@
 import React from 'react'
-
+import {Box,Text} from"@chakra-ui/react";
 
 function Connection() {
   return (
-    <div>İletişim
+  <>
+  
+  <Box>
+ 
+ <Text>iletişim</Text>
 
-
-
-
-    </div>
+  </Box>
+  
+  
+  </>
   )
 }
 

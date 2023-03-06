@@ -3,13 +3,13 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Products from "./Pages/AllProducts/Products"
-import ProductDetail from "./Pages/AllProducts/Products/ProductDetail";
+import Products from "./Pages/Products"
+import ProductDetail from "./Pages/Products/ProductDetail";
 import Connection from "./Pages/Connection";
-import Terlik from "./Pages/AllProducts/Products/Terlik";
-import Bot from "./Pages/AllProducts/Products/Bot"
-import KlasikAyakkabi from "./Pages/AllProducts/Products/KlasikAyakkabi"
-import SporAyakkabi from "./Pages/AllProducts/Products/SporAyakkabi"
+import Terlik from "./Pages/Products/Terlik";
+import Bot from "./Pages/Products/Bot"
+import KlasikAyakkabi from "./Pages/Products/KlasikAyakkabi"
+import SporAyakkabi from "./Pages/Products/SporAyakkabi"
 import { ArrowUpIcon } from "@chakra-ui/icons";
  function App() {
 
