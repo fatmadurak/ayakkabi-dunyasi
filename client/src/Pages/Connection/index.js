@@ -1,8 +1,14 @@
 import React from 'react'
 
+
 function Connection() {
   return (
-    <div>İletişim</div>
+    <div>İletişim
+
+
+
+
+    </div>
   )
 }
 
