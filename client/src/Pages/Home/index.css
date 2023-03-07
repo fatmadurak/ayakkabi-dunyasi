@@ -8,3 +8,19 @@
 
 
 }
+
+.carousal{
+
+    width: 900px;
+    height: 100px;
+
+
+}
+
+.carousalBox{
+
+display: flex;
+justify-content: center;
+margin-top: 100px;
+}
+
