@@ -44,10 +44,10 @@ function Navbar() {
       Kategori
      </MenuButton>
     <MenuList>
-    <MenuItem><Link to={"products/terlik"}>Terlik</Link></MenuItem>
-    <MenuItem><Link to={"products/sporAyakkabi"}>Spor Ayakkabı</Link></MenuItem>
-    <MenuItem><Link to={"products/bot"}>Bot</Link></MenuItem>
-    <MenuItem><Link to={"products/klasikAyakkabi"}>Klasik Ayakkabı</Link></MenuItem>
+    <Link to={"products/terlik"}><MenuItem>Terlik</MenuItem></Link>
+    <Link to={"products/sporAyakkabi"}> <MenuItem>Spor Ayakkabı</MenuItem></Link>
+    <Link to={"products/bot"}> <MenuItem>Bot</MenuItem></Link>
+    <Link to={"products/klasikAyakkabi"}><MenuItem>Klasik Ayakkabı</MenuItem></Link>
     </MenuList>
    </Menu>
         </li>

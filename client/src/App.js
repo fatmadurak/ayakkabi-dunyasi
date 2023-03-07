@@ -6,10 +6,10 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products"
 import ProductDetail from "./Pages/Products/ProductDetail";
 import Connection from "./Pages/Connection";
-import Terlik from "./Pages/Products/Terlik";
-import Bot from "./Pages/Products/Bot"
-import KlasikAyakkabi from "./Pages/Products/KlasikAyakkabi"
-import SporAyakkabi from "./Pages/Products/SporAyakkabi"
+import Terlik from "./Pages/Terlik";
+import Bot from "./Pages/Bot"
+import KlasikAyakkabi from "./Pages/KlasikAyakkabi"
+import SporAyakkabi from "./Pages/SporAyakkabi"
 import { ArrowUpIcon } from "@chakra-ui/icons";
  function App() {
 
