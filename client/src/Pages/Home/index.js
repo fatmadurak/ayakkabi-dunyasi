@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Box,Grid,Image} from "@chakra-ui/react"
 
-import { Link } from '@chakra-ui/react'
+import { Text} from '@chakra-ui/react'
 import "./index.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -11,11 +11,14 @@ function Home() {
 
   return (
   <>
+
+
   <Box>
-   <Grid templateColumns="repeat(6,1fr)"  gap={20} mt="280" justifyContent="center" alignItems="center" > 
+   <Grid templateColumns="repeat(6,1fr)"   mt="250" justifyContent="center" alignItems="center" > 
   
     <Box className='box'>
    
+    <Text fontSize="xl" pl={4}>Erkek</Text>
      
      <Image 
      borderRadius='full'
@@ -27,7 +30,7 @@ function Home() {
     </Box>
     <Box className='box'>
    
-
+    <Text fontSize="xl" pl={4}>Kadın</Text>
     <Image
     borderRadius='full'
     boxSize='100px'
@@ -39,7 +42,7 @@ function Home() {
 
    <Box className='box'>
    
- 
+   <Text fontSize="xl" pl={4}>Çocuk</Text>
     <Image 
     borderRadius='full'
     boxSize='100px'
@@ -51,7 +54,7 @@ function Home() {
 
    <Box className='box'>
    
- 
+   <Text fontSize="xl" pl={4} >Markalar</Text>
     <Image
     borderRadius='full'
     boxSize='100px'
@@ -62,7 +65,7 @@ function Home() {
    </Box>
    <Box className='box'>
    
- 
+   <Text fontSize="xl" pl={2} >Aksesuarlar</Text>
     <Image
     borderRadius='full'
     boxSize='100px'
@@ -73,7 +76,7 @@ function Home() {
    </Box>
    <Box className='box'>
    
-  
+   <Text fontSize="xl" pl={2}>Yıldızlı Ürünler</Text>
     <Image
     borderRadius='full'
     boxSize='100px'
@@ -94,18 +97,18 @@ function Home() {
           infiniteLoop="true"
           showArrows="true"
           className='carousal'
-    
+         
         >
           <div>
-            <img className='image'
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0136161_eclipse-taba-deri-kadin-bot-4783p17301100.jpeg"
+            <img 
+              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0150627.jpeg"
               alt="carouselImage"
             />
           </div>
 
           <div>
             <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141443_provoq-kahve-deri-kadin-bot-4498a2213200.jpeg"
+              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0152121.jpeg"
               alt="carouselImage"
             />
           </div>
@@ -113,50 +116,12 @@ function Home() {
           
           <div>
             <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126773_adidas-puremotion-siyah-kadin-ayakkabi-gx5637-2008gx5637.jpeg"
+              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0151768.jpeg"
               alt="carouselImage"
             />
           </div>
-       
-          <div>
-            <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0139920_adidas-racer-lego-beyaz-unisex-spor-ayakkabi-gx2240-2008gx2240.jpeg"
-              alt="carouselImage"
-            />
-          </div>
-          <div>
-            <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141347_joma-j-sima-2203-multi-cocuk-spor-ayakkabi-jsimaw2203v-2025jsimaw2203v.jpeg"
-              alt="carouselImage"
-            />
-          </div>
-          <div>
-            <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141633_adidas-tensaur-sport-2-0-beyaz-unisex-spor-ayakkabi-gw1987-2008gw1987.jpeg"
-              alt="carouselImage"
-            />
-          </div>
-          <div>
-            <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0141349_joma-j-sima-2203-multi-cocuk-spor-ayakkabi-jsimaw2203v-2025jsimaw2203v.jpeg"
-              alt="carouselImage"
-            />
-          </div>
-          <div>
-            <img 
-              src="https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0126773_adidas-puremotion-siyah-kadin-ayakkabi-gx5637-2008gx5637.jpeg"
-              alt="carouselImage"
-            />
-          </div>
+      
         </Carousel>
-
-
-
-
- 
-
-
-
 
 
   </Box>
