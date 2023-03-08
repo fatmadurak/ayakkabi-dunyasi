@@ -1,5 +1,5 @@
 import { createContext,useContext, useEffect, useState } from "react";
-import { fetchMe } from "../Api";
+import { fetchMe,fetchLogout } from "../Api";
 
 const AuthContext=createContext();
 
@@ -44,12 +44,13 @@ const login=(data)=>
  }
 
 
-const logout=()=>{
+const logout=async(callback)=>{
 
    setLoggedIn(false)
-  setUser(null)
- localStorage.removeItem("data");
-    
+   setUser(null)
+   localStorage.removeItem("data");
+   await fetchLogout();
+   callback();
 }
 
 

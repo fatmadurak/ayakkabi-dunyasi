@@ -3,11 +3,15 @@ import {Formik} from "formik"
 import { Link } from 'react-router-dom'
 import "../../../App.css"
 import validation from './validation'
-
+import { EmailControl,fetchLogin,PasswordControl } from '../../../Api'
 import {Box, FormControl, FormLabel, Heading,Input,Button} from "@chakra-ui/react"
-
+import { UseAuthContext } from '../../../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 function SignIn() {
+
+  const {login}=UseAuthContext()
+  const navigate=useNavigate()
   return (
  <Box>
 
@@ -18,12 +22,26 @@ function SignIn() {
    
 
      <Formik
-       initialValues={{ email: '', password: '', passwordConfirm: '' }}
+       initialValues={{ email: '', password: ''}}
        validationSchema={validation}
-       onSubmit={(values, bag) => {
+       onSubmit={async(values, bag) => {
       
-        
+        const emailControl= await EmailControl(values.email)
+        const passwordControl= await PasswordControl(values.password)
 
+        if (emailControl===undefined) {
+          
+          return bag.setErrors({ email: 'Bu e-mail adresi bulunamadı' });
+
+        } else if(passwordControl===undefined) {
+          return bag.setErrors({ email: 'email veya şifre yanlış..' });
+        }
+        else{
+         
+          const loginResponse=await fetchLogin(values.email)
+          login(loginResponse)
+          navigate("/profile")
+        }
 
 
        }}
@@ -68,8 +86,8 @@ function SignIn() {
 
     <Box>
 
-      <Button colorScheme="purple" mt={5} ml="2">Giriş Yap</Button>
-     <Link to="/signin"><Button colorScheme="purple" mt={5} ml="5">Kayıt Ol</Button></Link>
+     <Button type="submit" disabled={isSubmitting} colorScheme="purple" mt={5} ml="2">Giriş Yap</Button>
+     <Link to="/signup"><Button colorScheme="purple" mt={5} ml="5">Kayıt Ol</Button></Link>
     </Box>
          
          </form>

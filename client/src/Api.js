@@ -84,3 +84,18 @@ export const CategoryBot=async()=>{
       return data
       
     } 
+
+    export const fetchLogin = async (email) => {
+      const allUser = await getAllUsers();
+      const user = allUser.find((item) => item.email === email);
+      
+      return user;
+  }
+
+  export const fetchLogout=async()=>{
+
+    const {data}= await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)
+    
+    return data;
+    
+     }

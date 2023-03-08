@@ -6,7 +6,7 @@ function Profile() {
 
 
   return (
-    <div className='container'>Profile
+    <div className='container'>
       </div>
   )
 }

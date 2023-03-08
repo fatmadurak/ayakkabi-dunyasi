@@ -120,7 +120,7 @@ function SignUp() {
     <Box>
 
       <Button type="submit" disabled={isSubmitting} colorScheme="purple" mt={5} ml="2" >Kayıt Ol</Button>
-     
+      <Link to="/signin"><Button colorScheme="purple" mt={5} ml="5">Giriş Yap</Button></Link>
     </Box>
          
          </form>

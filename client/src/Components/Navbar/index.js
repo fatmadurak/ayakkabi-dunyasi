@@ -17,11 +17,13 @@ function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
  const navigate=useNavigate()
-  const logoutUser=()=>{
+  const logoutUser=async()=>{
 
+    logout(()=>{
 
-   logout()
-   navigate("/")
+      navigate("/")
+
+     });
 
   }
 
