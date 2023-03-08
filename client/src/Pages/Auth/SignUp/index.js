@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik} from "formik"
 import { Link } from 'react-router-dom'
 import "../../../App.css"
+import validation from "./validation"
 
 import {Box, FormControl, FormLabel, Heading,Input,Button} from "@chakra-ui/react"
 
@@ -18,7 +19,7 @@ function SignUp() {
 
      <Formik
        initialValues={{ email: '', password: '', passwordConfirm: '' }}
-      
+        validationSchema={validation}
        onSubmit={(values, bag) => {
       
        }}
