@@ -44,3 +44,12 @@ export const CategoryBot=async()=>{
      return ClassicAyakkabiData;
               
     }      
+
+
+    export const fetchMe=async()=>{
+
+      const {data}= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)      
+      return data;
+               
+     }      
+ 
