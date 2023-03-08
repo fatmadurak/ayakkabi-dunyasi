@@ -10,9 +10,11 @@ import { Button,Box,Text,  Menu,
   MenuGroup,
   MenuOptionGroup,
   MenuDivider } from '@chakra-ui/react';
-
+import {UseAuthContext} from "../../context/AuthContext"
 
 function Navbar() {
+
+  const {loggedIn}=UseAuthContext()
   return (
     <nav className={Styles.nav}>
 
@@ -77,8 +79,30 @@ function Navbar() {
       </Link>
       </li>
 
-     <li><Link to={"signin"}><Button colorScheme='purple'> Giriş Yap</Button></Link></li>
-     <li><Link to={"signup"}><Button colorScheme='purple'>Kayıt Ol</Button></Link></li>
+    { loggedIn && 
+      <>
+    <li><Link to={"profile"}><Button colorScheme='purple'> Profile</Button></Link></li>
+
+     </>
+  
+   
+
+
+    }
+
+
+    {
+
+     !loggedIn && 
+     <>
+    <li><Link to={"signin"}><Button colorScheme='purple'> Giriş Yap</Button></Link></li>
+    <li><Link to={"signup"}><Button colorScheme='purple'>Kayıt Ol</Button></Link></li>
+   </>
+    }
+
+
+
+   
      </ul>
      
      

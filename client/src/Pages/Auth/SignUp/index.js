@@ -7,7 +7,7 @@ import validation from "./validation"
 import { useNavigate } from 'react-router-dom'
 import {Box, FormControl, FormLabel, Heading,Input,Button} from "@chakra-ui/react"
 import { EmailControl, fetchRegister } from '../../../Api'
-import { UseAuthContext } from '../../../context/AuthContext'
+import {UseAuthContext} from "../../../context/AuthContext"
 
 
 function SignUp() {
@@ -39,14 +39,14 @@ function SignUp() {
             const emailControl= await EmailControl(values.email)
             if (emailControl===undefined) {
              
-            const fetchRegister = await fetchRegister({
+            const registerResponse = await fetchRegister({
          
               role:"user",
               email:values.email,
               password:values.password,
               
             })
-            login(fetchRegister)
+            login(registerResponse)
             navigate("/profile")
      
             }

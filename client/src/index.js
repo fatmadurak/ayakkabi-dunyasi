@@ -6,7 +6,7 @@ import "./reset.css"
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { AuthContextProvider } from './context/AuthContext';
+import  {AuthContextProvider}  from './context/AuthContext';
 
 const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
