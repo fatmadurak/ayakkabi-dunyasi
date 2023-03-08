@@ -9,12 +9,23 @@ import { Button,Box,Text,  Menu,
   MenuItemOption,
   MenuGroup,
   MenuOptionGroup,
-  MenuDivider } from '@chakra-ui/react';
+  MenuDivider,Image} from '@chakra-ui/react';
 import {UseAuthContext} from "../../context/AuthContext"
-
+import { getAllUsers } from '../../Api';
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
 
-  const {loggedIn}=UseAuthContext()
+  const {loggedIn,user,logout}=UseAuthContext()
+ const navigate=useNavigate()
+  const logoutUser=()=>{
+
+
+   logout()
+   navigate("/")
+
+  }
+
+
   return (
     <nav className={Styles.nav}>
 
@@ -81,7 +92,30 @@ function Navbar() {
 
     { loggedIn && 
       <>
-    <li><Link to={"profile"}><Button colorScheme='purple'> Profile</Button></Link></li>
+
+    <li><Link to={"profile"}> <Menu>
+  <MenuButton as={Button} colorScheme="purple">Profile</MenuButton > <MenuList>
+    <MenuItem minH='48px'>
+      <Image
+        boxSize='2rem'
+        borderRadius='full'
+        src='https://placekitten.com/100/100'
+        alt='Fluffybuns the destroyer'
+        mr='12px'
+      />
+      <span>kullanıcı adı gelecek</span>
+    </MenuItem>
+    <MenuItem minH='40px'>
+      <Image
+      
+        src=''
+        mr='12px'
+      />
+      <span onClick={logoutUser}>Çıkış Yap</span>
+    </MenuItem>
+  </MenuList></Menu></Link></li>
+
+
 
      </>
   

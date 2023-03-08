@@ -1,8 +1,13 @@
+import { Button } from 'antd'
 import React from 'react'
+import "../../App.css"
 
 function Profile() {
+
+
   return (
-    <div>Profile</div>
+    <div className='container'>Profile
+      </div>
   )
 }
 
