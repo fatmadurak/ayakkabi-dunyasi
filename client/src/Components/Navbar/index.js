@@ -77,8 +77,8 @@ function Navbar() {
       </Link>
       </li>
 
-     <li><Link to={"/signin"}><Button colorScheme='purple'> Giriş Yap</Button></Link></li>
-     <li><Link to={"/signup"}><Button colorScheme='purple'>Kayıt Ol</Button></Link></li>
+     <li><Link to={"signin"}><Button colorScheme='purple'> Giriş Yap</Button></Link></li>
+     <li><Link to={"signup"}><Button colorScheme='purple'>Kayıt Ol</Button></Link></li>
      </ul>
      
      

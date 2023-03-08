@@ -45,3 +45,13 @@
   background: #c0b9dd;
 
 }
+
+.container{
+
+margin-top: 19%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+

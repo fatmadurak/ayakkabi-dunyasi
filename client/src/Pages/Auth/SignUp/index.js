@@ -6,7 +6,7 @@ import "../../../App.css"
 import {Box, FormControl, FormLabel, Heading,Input,Button} from "@chakra-ui/react"
 
 
-function SignIn() {
+function SignUp() {
   return (
  <Box>
 
@@ -61,10 +61,23 @@ function SignIn() {
      </FormControl>
 
 
+
+     <FormControl>
+      
+      <FormLabel>Şifre Onayı:</FormLabel>
+       <Input   type="passwordConfirm"
+        name="passwordConfirm"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        value={values.passwordConfirm}/>
+        {errors.passwordConfirm && touched.passwordConfirm && errors.passwordConfirm}
+     </FormControl>
+
+     
     <Box>
 
-      <Button colorScheme="purple" mt={5} ml="2">Giriş Yap</Button>
-     <Link to="/signin"><Button colorScheme="purple" mt={5} ml="5">Kayıt Ol</Button></Link>
+      <Button colorScheme="purple" mt={5} ml="2">Kayıt Ol</Button>
+     <Link to="/signin"><Button colorScheme="purple" mt={5} ml="5">Giriş Yap</Button></Link>
     </Box>
          
          </form>
@@ -82,4 +95,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export default SignUp

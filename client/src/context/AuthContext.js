@@ -73,4 +73,4 @@ return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>
 const UseAuthContext=useContext(AuthContext)
 
 
-export default{AuthContext,AuthContextProvider}
+export {AuthContext,AuthContextProvider}
