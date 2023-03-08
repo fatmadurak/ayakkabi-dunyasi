@@ -8,7 +8,7 @@ const AuthContext=createContext();
 const AuthContextProvider=({children})=>{
 
 const[loggedIn,setLoggedIn]=useState(false);
-const[user,SetUser]=useState(null);
+const[user,setUser]=useState(null);
 
 useEffect(()=>{
 
@@ -20,9 +20,10 @@ useEffect(()=>{
       if (loginData !==null) {
           
        const newMe=  me.find((item)=>item.email===loginData .email)
-       setLoggedIn(true) 
+      
+       setLoggedIn(true)
        setUser(newMe)
-  
+
       }
   
   
@@ -32,32 +33,35 @@ useEffect(()=>{
   
   },[])
 
-// const login=(data)=>
+const login=(data)=>
 
-// {
+ {
 
-//   setLoggedIn(true)
-//   setUser(data)
-//   localStorage.setItem('data', JSON.stringify(data));
+   setLoggedIn(true)
+   setUser(data)
+   localStorage.setItem('data', JSON.stringify(data));
 
-// }
+ }
 
 
-//const logout=()=>{
+const logout=()=>{
 
-//   setLoggedIn(false)
-//   setUser(null)
-//  localStorage.removeItem("data");
+   setLoggedIn(false)
+  setUser(null)
+ localStorage.removeItem("data");
     
-//}
+}
 
 
 const values={
 
-    loggedIn,
-    setLoggedIn,
-    user,
-    setUser,
+  loggedIn,
+  setLoggedIn,
+ user,
+ setUser,
+ login,
+ logout
+
    
 
 }
@@ -70,7 +74,7 @@ return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>
 
 
 
-const UseAuthContext=useContext(AuthContext)
+const UseAuthContext=()=>useContext(AuthContext)
 
 
-export {AuthContext,AuthContextProvider}
+export {UseAuthContext,AuthContextProvider}

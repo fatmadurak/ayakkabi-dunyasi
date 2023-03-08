@@ -22,6 +22,10 @@ function SignIn() {
        validationSchema={validation}
        onSubmit={(values, bag) => {
       
+        
+
+
+
        }}
      >
        {({
@@ -34,9 +38,9 @@ function SignIn() {
          isSubmitting,
          /* and other goodies */
        }) => (
-         <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit}style={{width:"20%"}}>
 
-       <Heading size={"xl"} textAlign="center">KAYIT OL</Heading>
+       <Heading size={"xl"} textAlign="center">GİRİŞ YAP</Heading>
 
 
           <FormControl>

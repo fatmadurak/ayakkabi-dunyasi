@@ -13,6 +13,8 @@ import SporAyakkabi from "./Pages/SporAyakkabi"
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import SignUp from "./Pages/Auth/SignUp";
 import SignIn from "./Pages/Auth/SignIn";
+import ProtectedRoute from "./Pages/ProtectedRoute";
+import Profile from "./Pages/Profile";
  function App() {
 
   const [showButton, setShowButton] = useState(false);
@@ -54,6 +56,9 @@ import SignIn from "./Pages/Auth/SignIn";
         <Route path="/products/sporAyakkabi" element={<SporAyakkabi/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route  path="/profile"element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+        
         </Routes>
        
        </div>

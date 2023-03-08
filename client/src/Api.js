@@ -52,4 +52,35 @@ export const CategoryBot=async()=>{
       return data;
                
      }      
- 
+
+
+     
+     export const getAllUsers=async()=>{
+
+      const {data}= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)      
+      return data;
+               
+     }      
+
+
+     export const EmailControl=async(email)=>{
+
+       const data=await getAllUsers()
+       return data.find((item)=>item.email===email)
+      
+       
+     }      
+
+     export const PasswordControl=async(password)=>{
+
+      const data= await getAllUsers()
+      return data.find((item)=>item.password===password)
+      
+    } 
+
+    export const fetchRegister=async(input)=>{
+
+      const data=await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/users`,input)
+      return data
+      
+    } 
