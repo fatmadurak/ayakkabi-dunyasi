@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {CategoryBot} from "../../Api"
-import {Grid} from '@chakra-ui/react';
+import {Grid,Box} from '@chakra-ui/react';
 import Card from "../../Components/Card.js"
 function Bot() {
   
@@ -26,7 +26,7 @@ function Bot() {
 
   return (
    <>
-   
+     <Box className="content">
 
      {  bot && (
 
@@ -54,7 +54,7 @@ function Bot() {
 
 
 
-
+</Box>
    
    </>
   )

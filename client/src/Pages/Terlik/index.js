@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {CategoryTerlik} from "../../Api"
-import {Grid} from '@chakra-ui/react';
+import {Grid,Box} from '@chakra-ui/react';
 import Card from "../../Components/Card.js"
 function Terlik() {
   
@@ -26,7 +26,7 @@ function Terlik() {
 
   return (
    <>
-   
+   <Box className="content">
 
      {  terlikData && (
 
@@ -54,7 +54,7 @@ function Terlik() {
 
 
 
-
+</Box>
    
    </>
   )

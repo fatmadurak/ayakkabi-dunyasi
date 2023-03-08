@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {ClassicAyakkabi} from "../../Api"
-import {Grid} from '@chakra-ui/react';
+import {Grid,Box} from '@chakra-ui/react';
 import Card from "../../Components/Card.js"
 function KlasikAyakkabi() {
   
@@ -26,7 +26,7 @@ function KlasikAyakkabi() {
 
   return (
    <>
-   
+   <Box className='content'>
 
      {  klasik && (
 
@@ -55,7 +55,7 @@ function KlasikAyakkabi() {
 
 
 
-   
+</Box>
    </>
   )
 }

@@ -4,10 +4,9 @@ import axios from "axios"
 
  export const FetchProductList=async()=>{
 
-const {data}=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
-console.log(data)
-return data;
-}
+    const {data}=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products`)
+    return data;
+   }
 
 
 export const CategoryTerlik=async()=>{

@@ -11,7 +11,8 @@ function Home() {
 
   return (
   <>
-
+  
+  <Box className='content'>
 
   <Box>
    <Grid templateColumns="repeat(6,1fr)"   mt="250" justifyContent="center" alignItems="center" > 
@@ -136,7 +137,7 @@ function Home() {
   
   
   
-  
+   </Box>
 
   
   

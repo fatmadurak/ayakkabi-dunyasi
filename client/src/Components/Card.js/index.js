@@ -15,7 +15,7 @@ function Card({item}) {
     <Box p="5px" overflow="hidden" borderRadius="xl" borderWidth="1px"  className='imageCard'>
     
     <Link to={`/products/${item.id}`}> 
-    <Image  src={item.images[0]} alt='CardImage'  width={300} height={320} border="xl" />
+    <Image  src={item.images[0]} alt='CardImage'  width={250} height={290} border="xl" />
     </Link>
    
     <Box>

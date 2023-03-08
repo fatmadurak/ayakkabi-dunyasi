@@ -40,7 +40,7 @@ import { ArrowUpIcon } from "@chakra-ui/icons";
      <Navbar/>
        
 
-       <div className="content">
+       <div >
        <Routes>
         <Route path="/" exact element={<Home/>}/>
         <Route path="/home" exact element={<Home/>}/>
