@@ -109,7 +109,7 @@ function Navbar() {
         alt='Fluffybuns the destroyer'
         mr='12px'
       />
-      <span>{user[user.length - 1].userName}</span>
+     <Link to={"/profile"}> <span>{ user.userName}</span></Link>
     </MenuItem>
     <MenuItem minH='40px'>
       <Image

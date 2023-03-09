@@ -247,44 +247,43 @@
       "email": "atuny0@sohu.com",
       "password": "9uQFF1Lh",
       "role": "user",
-      "userName": "atuny"
+      "userName": "Atuny"
     },
     {
       "id": 2,
       "email": "fatmabadilli6342@gmail.com",
       "password": "12345",
       "role": "user",
-      "userName": "fatma"
+      "userName": "Fatma"
     },
     {
       "id": 3,
       "email": "admin@admin.com",
       "password": "12345",
       "role": "admin",
-      "userName": "admin"
+      "userName": "Admin"
     },
     {
       "role": "user",
       "email": "yusufdurak105@gmail.com",
       "password": "12345",
       "id": 4,
-      "userName": "yusuf"
+      "userName": "Yusuf"
     },
     {
       "role": "user",
       "email": "alchemistalker@gmail.com",
       "password": "123456",
       "id": 5,
-      "userName": "talker"
+      "userName": "Talker"
     },
-  
     {
       "role": "user",
       "email": "cicek@gmail.com",
       "password": "12345",
+      "userName": "Admin",
       "id": 6
     },
-  
     {
       "role": "user",
       "email": "ayse@gmail.com",
@@ -292,6 +291,7 @@
       "userName": "Ayşe Nur",
       "id": 7
     }
+   
   ],
   "orders": [
     {

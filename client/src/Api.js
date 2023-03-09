@@ -94,7 +94,7 @@ export const CategoryBot=async()=>{
 
   export const fetchLogout=async()=>{
 
-    const {data}= await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)
+    const {data}= await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/users`)
     
     return data;
     

@@ -10,6 +10,8 @@ const AuthContextProvider=({children})=>{
 const[loggedIn,setLoggedIn]=useState(false);
 const[user,setUser]=useState(null);
 
+
+
 useEffect(()=>{
 
     (async()=>{
