@@ -40,7 +40,7 @@ const login=(data)=>
    setLoggedIn(true)
    setUser(data)
    localStorage.setItem('data', JSON.stringify(data));
-
+   
  }
 
 

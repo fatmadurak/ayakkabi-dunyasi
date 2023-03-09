@@ -25,7 +25,7 @@ function SignUp() {
    
 
      <Formik
-       initialValues={{ email: '', password: '', passwordConfirm: '' }}
+       initialValues={{ email: '', password: '', passwordConfirm: '',userName:'' }}
         validationSchema={validation}
        onSubmit={(values, bag) => {
       
@@ -44,10 +44,14 @@ function SignUp() {
               role:"user",
               email:values.email,
               password:values.password,
-              
+              userName:values.userName
             })
             login(registerResponse)
             navigate("/profile")
+
+
+           
+  
      
             }
             else{
@@ -79,6 +83,20 @@ function SignUp() {
          <form onSubmit={handleSubmit} style={{width:"20%"}}>
 
        <Heading size={"xl"} textAlign="center">KAYIT OL</Heading>
+
+
+       <FormControl>
+      
+      <FormLabel>Kullanıcı Adı:</FormLabel>
+       <Input   type="userName"
+        name="userName"
+        onChange={handleChange}
+        onBlur={handleBlur}
+        value={values.userName}/>
+        {errors.userName && touched.userName && errors.userName}
+     </FormControl>
+
+  
 
 
           <FormControl>

@@ -16,6 +16,10 @@ import { useNavigate } from 'react-router-dom';
 function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
+
+
+  
+    
  const navigate=useNavigate()
   const logoutUser=async()=>{
 
@@ -105,7 +109,7 @@ function Navbar() {
         alt='Fluffybuns the destroyer'
         mr='12px'
       />
-      <span>kullanıcı adı gelecek</span>
+      <span>{user[user.length - 1].userName}</span>
     </MenuItem>
     <MenuItem minH='40px'>
       <Image
