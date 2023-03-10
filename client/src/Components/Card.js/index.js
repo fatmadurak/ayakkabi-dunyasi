@@ -2,11 +2,12 @@ import React from 'react'
 import { Box,Text,Image,Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import "../../../src/App.css"
+import { UseBasketContext } from '../../context/BasketContext'
 
 function Card({item}) {
 
-
-
+const{items}=UseBasketContext();
+const findItem= items.find((itemBasket)=>itemBasket.id===item.id)
  
 
   return (
