@@ -8,6 +8,13 @@ import axios from "axios"
     return data;
    }
 
+   
+ export const FetchProduct=async(id)=>{
+
+  const {data}=await axios.get(`${process.env.REACT_APP_BASE_ENDPOINT}/products/${id}`)
+  return data;
+ }
+
 
 export const CategoryTerlik=async()=>{
 

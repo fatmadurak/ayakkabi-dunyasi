@@ -13,11 +13,12 @@ import { Button,Box,Text,  Menu,
 import {UseAuthContext} from "../../context/AuthContext"
 import { getAllUsers } from '../../Api';
 import { useNavigate } from 'react-router-dom';
+import { UseBasketContext } from '../../context/BasketContext';
 function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
 
-
+  const{basket}=UseBasketContext()
   
     
  const navigate=useNavigate()
@@ -91,7 +92,7 @@ function Navbar() {
       <Button colorScheme='yellow'variant='outline' ><span className="material-symbols-outlined">
         shopping_basket
        </span>
-        Sepet
+        Sepet {basket.length>=0 && <span>({basket.length})</span>}
       </Button>
       </Link>
       </li>

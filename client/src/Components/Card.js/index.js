@@ -6,17 +6,19 @@ import { UseBasketContext } from '../../context/BasketContext'
 
 function Card({item}) {
 
-const{items}=UseBasketContext();
-const findItem= items.find((itemBasket)=>itemBasket.id===item.id)
+const{basket,addToBasket}=UseBasketContext();
+const findItem= basket.find((basketItem)=>basketItem.id===item.id)
  
 
   return (
     <>
     
-    <Box p="5px" overflow="hidden" borderRadius="xl" borderWidth="1px"  className='imageCard'>
+    <Box p="5px" overflow="hidden" borderRadius="xl" borderWidth="1px" className='imageCard' >
     
+
+
     <Link to={`/products/${item.id}`}> 
-    <Image  src={item.images[0]} alt='CardImage'  width={250} height={290} border="xl" />
+    <Image  src={item.images[0]} alt='CardImage'  width={250} height={290} border="xl"  />
     </Link>
    
     <Box>
@@ -39,9 +41,13 @@ const findItem= items.find((itemBasket)=>itemBasket.id===item.id)
     </Box>
     </Box>
 
+
      
-    <Button colorScheme='purple' variant='solid' mt={5} >
-       Sepete Ekle
+    <Button colorScheme={findItem ?"green":"purple"} variant='solid' mt={5} onClick={()=>{addToBasket(findItem,item)}}>
+    {
+      findItem ?  "Sepetten Çıkar":  "Sepete Ekle"
+
+    }
     </Button>
  
 
