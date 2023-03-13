@@ -14,9 +14,14 @@ import {UseAuthContext} from "../../context/AuthContext"
 import { useNavigate } from 'react-router-dom';
 import { UseBasketContext } from '../../context/BasketContext';
 
+
 function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
+
+console.log(user)
+
+  
 
   const{basket}=UseBasketContext()
   
@@ -89,8 +94,8 @@ function Navbar() {
      <ul className={Styles.menu}>
      
     {
-      user.role!=="admin" && (
-
+      user && user.role!=="admin" && (
+      <>
         <li>
         <Link to={"/basket"}> 
         <Button colorScheme='yellow'variant='outline' ><span className="material-symbols-outlined">
@@ -100,7 +105,7 @@ function Navbar() {
         </Button>
         </Link>
         </li>
-
+        </>
       )
 
 
@@ -108,7 +113,7 @@ function Navbar() {
     }
 
     {
-     user.role==="admin" &&
+    user && user.role==="admin" && ( <>
      <li>
      <Link to={"/admin"}> 
      <Button colorScheme='yellow'variant='outline' >
@@ -116,8 +121,8 @@ function Navbar() {
      </Button>
      </Link>
      </li>
-
-    }
+     </>
+   ) }
 
 
      
