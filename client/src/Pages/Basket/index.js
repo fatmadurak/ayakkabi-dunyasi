@@ -1,74 +1,91 @@
 import React from 'react'
-import { Box,Alert,AlertIcon,AlertDescription, Grid ,Text,Image} from '@chakra-ui/react'
+import { Box,Alert,AlertIcon,AlertDescription, Grid ,Text,Image,Button} from '@chakra-ui/react'
 import { UseBasketContext } from '../../context/BasketContext'
-
+import { Link } from 'react-router-dom'
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure
+    
+  } from '@chakra-ui/react'
 function Basket() {
 
-  const {basket}=UseBasketContext()
+    const{basket,removeToBasket}=UseBasketContext();
+    
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
 
   console.log(basket)
   return (
-    <Box  mt={150}  >
+    <Box  mt={250}  >
   
    {  
-     basket>0 && (
+     basket.length > 0 && (
 
     <>
-     
+       <Alert status='success'>
+      <AlertIcon />
+      Sepetinizde {basket.length} tane ürün bulunmaktadır...
+       </Alert>
       
-      <Grid templateRows={"repeat(auto,1fr)"}>
+      <Grid  ml={20}>
 
       {
 
-       basket.map((basketItem)=>{
-
-       <Box>
-    
-         <Text>{basketItem.title}</Text>
-
-         <Box>
-
-          <p>{basketItem.description}</p>
-        
-        </Box>
+       basket.map((basketItem)=>
+       
+   
+      
+       <Box p="5px" overflow="hidden" borderRadius="xxl" borderWidth="1px" >
+   
+       <Link to={`products/${basketItem.id}`}><Image  src={basketItem.images[0]} alt='CardImage'  width={350} height={390} border="xl"  mt="5"/></Link>
 
 
         <Box>
-        
-        <Text>{basketItem.price}</Text>
+   
+        <Text fontSize='xl'>{basketItem.title}</Text>
+   
         </Box>
-
         <Box>
-         <Image src={basketItem.images[0]} alt="basketImage" height={500} width={500}/>
+   
+       <Text fontSize='md'>{basketItem.description}</Text>
+   
         </Box>
+   
+        <Box>
+   
+       <Text fontSize='3xl'>{basketItem.price}TL</Text>
+   
+       </Box>
+
+       <Button colorScheme="purple" variant='solid' mt={5} onClick={()=>removeToBasket(basketItem)}>
+    {
+      "Sepetten Çıkar"
+
+    }
+    </Button>
 
        </Box>
-    
-  
 
-       })
+       )
         
       }
         
-     
-        
-           
-
-
-
+      
       </Grid>
         
-
-
-     
-    
-    
+      <Button onClick={onOpen} colorScheme="green" ml={20} mt={5}>Sipariş Ver</Button>
     </>
 
      )
 
    }
-  { basket<=0 &&
+  { basket.length<=0 &&
       (
 
 
@@ -86,6 +103,26 @@ function Basket() {
 
   }
 
+
+<Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Create your account</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody pb={6}>
+          
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3}>
+           Siparişi Kaydet
+            </Button>
+            <Button onClick={onClose}>Siparişi İptal Et</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
+    
     </Box>
   )
 }

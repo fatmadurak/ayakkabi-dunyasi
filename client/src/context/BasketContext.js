@@ -30,10 +30,21 @@ const filtered=basket.filter((basketItem)=>basketItem.id!==findItem.id)
 }
 
 
+const removeToBasket=(data)=>{
+
+const filtered=basket.filter((item)=>item.id!==data.id)
+
+return setBasket(filtered)
+}
+
+
+
+
 const values={
 basket,
 setBasket,
-addToBasket
+addToBasket,
+removeToBasket
 
 }
 
