@@ -5,7 +5,6 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products"
 import ProductDetail from "./Pages/ProductDetail";
-import Connection from "./Pages/Connection";
 import Terlik from "./Pages/Terlik";
 import Bot from "./Pages/Bot"
 import KlasikAyakkabi from "./Pages/KlasikAyakkabi"
@@ -48,8 +47,7 @@ import Profile from "./Pages/Profile";
        <Routes>
         <Route path="/" exact element={<Home/>}/>
         <Route path="/products"  element={<Products/>}/>
-        <Route path="/products/:id"  element={<ProductDetail/>}/>
-        <Route path="/iletisim"  element={<Connection/>}/>
+        <Route path="/products/:product_id"  element={<ProductDetail/>}/>
         <Route path="/products/terlik" element={<Terlik/>}/>
         <Route path="/products/bot" element={<Bot/>}/>
         <Route path="/products/klasikAyakkabi" element={<KlasikAyakkabi/>}/>

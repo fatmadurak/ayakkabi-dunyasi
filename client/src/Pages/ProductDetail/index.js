@@ -1,34 +1,56 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import {FetchProduct} from "../../Api"
+import {fetchProduct} from "../../Api"
 import { useQuery } from 'react-query'
-import { Box,Text } from '@chakra-ui/react'
+import { Box,Text, transition } from '@chakra-ui/react'
 import ImageGallery from 'react-image-gallery';
 
 function ProductDetail() {
 
   const {product_id}=useParams()
-  const { isLoading, error, data } = useQuery(["products",product_id], () =>FetchProduct(product_id))
-
   
+  console.log("id",product_id)
+
+  const { isLoading, error, data } = useQuery(["products",product_id], () =>fetchProduct(product_id))
   if (isLoading) return 'Loading...'
+
+  if (error) return 'An error has occurred: ' + error.message
+
+
+  const images =data.images.map((url)=>({original:url}))
+  
+return (
  
-   if (error) return 'An error has occurred: ' + error.message
+  <Box marginTop="300px" >
+    <Box  >
+ <Box >
 
+<Text fontSize='xl'>{data.title}</Text>
 
-  const images=data.images.map((url)=>({original:url} ))
+</Box>
+<Box>
 
-  return (
-   <Box className='content' style={{marginTop:"500px"}}>
+<Text fontSize='md'>{data.description}</Text>
 
+</Box>
 
+<Box>
 
-       <ImageGallery items={images}/>
+<Text fontSize='3xl'>{data.price}TL</Text>
 
-       </Box>
+</Box>
+</Box>
+    <Box className='content'>
+ 
+     <Box mt={10} >
 
+     <ImageGallery items={images}  />
 
-  )
+     </Box>
+  </Box>
+  </Box>
+  
+  
+)
 }
-
 export default ProductDetail

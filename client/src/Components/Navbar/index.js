@@ -86,7 +86,7 @@ function Navbar() {
 
 
      <ul className={Styles.menu}>
-      <li><Link to={"/iletisim"}><Text  fontSize='md'>İletişim</Text></Link></li>
+     
       <li>
       <Link to={"/basket"}> 
       <Button colorScheme='yellow'variant='outline' ><span className="material-symbols-outlined">
