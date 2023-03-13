@@ -38,13 +38,15 @@ return setBasket(filtered)
 }
 
 
+const emptyBasket=()=>setBasket("")
 
 
 const values={
 basket,
 setBasket,
 addToBasket,
-removeToBasket
+removeToBasket,
+emptyBasket
 
 }
 

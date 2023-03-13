@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box,Alert,AlertIcon,AlertDescription, Grid ,Text,Image,Button} from '@chakra-ui/react'
 import { UseBasketContext } from '../../context/BasketContext'
 import { Link } from 'react-router-dom'
@@ -10,13 +10,50 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-    useDisclosure
+    useDisclosure,
+    Input,
+    FormControl,
+    FormLabel,
+    useToast
+
     
   } from '@chakra-ui/react'
+import { fetchOrder } from '../../Api'
 function Basket() {
 
-    const{basket,removeToBasket}=UseBasketContext();
+  const toast = useToast();
+    const[address,setAddress]=useState("");
+    const{basket,removeToBasket,emptyBasket}=UseBasketContext();
     
+    const handleClick=async()=>{
+  
+    await fetchOrder({address:address})
+
+    emptyBasket();
+    
+    onClose(
+      toast({
+        title: `Siparişiniz Alındı!`,
+        description: "En kısa sürede kargoya verilecektir.",
+        status: "success",
+        duration: 6000,
+        isClosable: true,
+        position: "top",
+      })
+    );
+
+    }
+
+    const total = basket.reduce((acc, obj) => {
+      if (typeof obj.price === "number") {
+        return acc + obj.price;
+      } else if (typeof obj.price === "string") {
+        return acc + Number(obj.price);
+      } else {
+        return acc;
+      }
+    }, 0);
+
     const { isOpen, onOpen, onClose } = useDisclosure()
 
 
@@ -78,7 +115,11 @@ function Basket() {
         
       
       </Grid>
+      <Box  ml={20} mt={5}>
         
+        <Text fontSize={22}> Total:{total}</Text>
+ 
+       </Box>
       <Button onClick={onOpen} colorScheme="green" ml={20} mt={5}>Sipariş Ver</Button>
     </>
 
@@ -104,20 +145,29 @@ function Basket() {
   }
 
 
-<Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+<Modal
+       
+        isOpen={isOpen}
+        onClose={onClose}
+      >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Create your account</ModalHeader>
+          <ModalHeader>Sipariş Oluştur</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
+            <FormControl>
+              <FormLabel>Address</FormLabel>
+              <Input type="address" name="address" value={address}  onChange={(e)=>{setAddress(e.target.value)}}  placeholder='Address :' />
+            </FormControl>
           
+        
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
-           Siparişi Kaydet
+            <Button colorScheme='blue' mr={3} onClick={handleClick}>
+              Kaydet
             </Button>
-            <Button onClick={onClose}>Siparişi İptal Et</Button>
+            <Button onClick={onClose}>İptal Et</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

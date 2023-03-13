@@ -108,3 +108,12 @@ export const CategoryBot=async()=>{
     return data;
     
      }
+
+     export const fetchOrder=async(input)=>{
+
+      const {data}= await axios.post(`${process.env.REACT_APP_BASE_ENDPOINT}/orders`,input)
+      
+      return data;
+      
+       }
+  

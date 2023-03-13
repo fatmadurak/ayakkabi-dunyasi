@@ -11,16 +11,16 @@ import { Button,Box,Text,  Menu,
   MenuOptionGroup,
   MenuDivider,Image} from '@chakra-ui/react';
 import {UseAuthContext} from "../../context/AuthContext"
-import { getAllUsers } from '../../Api';
 import { useNavigate } from 'react-router-dom';
 import { UseBasketContext } from '../../context/BasketContext';
+
 function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
 
   const{basket}=UseBasketContext()
   
-    
+  
  const navigate=useNavigate()
   const logoutUser=async()=>{
 
@@ -31,6 +31,7 @@ function Navbar() {
      });
 
   }
+
 
 
   return (
@@ -87,15 +88,39 @@ function Navbar() {
 
      <ul className={Styles.menu}>
      
-      <li>
-      <Link to={"/basket"}> 
-      <Button colorScheme='yellow'variant='outline' ><span className="material-symbols-outlined">
-        shopping_basket
-       </span>
-        Sepet {basket.length>=0 && <span>({basket.length})</span>}
-      </Button>
-      </Link>
-      </li>
+    {
+      user.role!=="admin" && (
+
+        <li>
+        <Link to={"/basket"}> 
+        <Button colorScheme='yellow'variant='outline' ><span className="material-symbols-outlined">
+          shopping_basket
+         </span>
+          Sepet {basket.length>=0 && <span>({basket.length})</span>}
+        </Button>
+        </Link>
+        </li>
+
+      )
+
+
+
+    }
+
+    {
+     user.role==="admin" &&
+     <li>
+     <Link to={"/admin"}> 
+     <Button colorScheme='yellow'variant='outline' >
+      Admin
+     </Button>
+     </Link>
+     </li>
+
+    }
+
+
+     
 
     { loggedIn && 
       <>
