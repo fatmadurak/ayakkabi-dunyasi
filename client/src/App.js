@@ -14,6 +14,7 @@ import SignUp from "./Pages/Auth/SignUp";
 import SignIn from "./Pages/Auth/SignIn";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 import Profile from "./Pages/Profile";
+import Basket from "./Pages/Basket";
  function App() {
 
   const [showButton, setShowButton] = useState(false);
@@ -56,7 +57,7 @@ import Profile from "./Pages/Profile";
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route  path="/profile"element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
-        
+        <Route path="/basket" element={<Basket/>}/>
         </Routes>
        
        </div>
