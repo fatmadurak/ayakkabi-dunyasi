@@ -19,15 +19,17 @@ import {
     
   } from '@chakra-ui/react'
 import { fetchOrder } from '../../Api'
+import { UseAuthContext } from '../../context/AuthContext'
 function Basket() {
 
   const toast = useToast();
     const[address,setAddress]=useState("");
     const{basket,removeToBasket,emptyBasket}=UseBasketContext();
-    
+    const {user}=UseAuthContext()
     const handleClick=async()=>{
   
-    await fetchOrder({address:address})
+    await fetchOrder({address:address,userName:user.userName,basket:basket.length})
+
 
     emptyBasket();
     
@@ -44,15 +46,15 @@ function Basket() {
 
     }
 
-    const total = basket.reduce((acc, obj) => {
-      if (typeof obj.price === "number") {
-        return acc + obj.price;
-      } else if (typeof obj.price === "string") {
-        return acc + Number(obj.price);
-      } else {
-        return acc;
-      }
-    }, 0);
+// const total = basket.reduce((acc, obj) => {
+//   if (typeof obj.price === "number") {
+//      return acc + obj.price;
+//     } else if (typeof obj.price === "string") {
+//      return acc + Number(obj.price);
+//    } else {
+//      return acc;
+//     }
+//  }, 0);
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -117,7 +119,7 @@ function Basket() {
       </Grid>
       <Box  ml={20} mt={5}>
         
-        <Text fontSize={22}> Total:{total}</Text>
+        {/* { <Text fontSize={22}> Total:{total}</Text> } */}
  
        </Box>
       <Button onClick={onOpen} colorScheme="green" ml={20} mt={5}>Sipariş Ver</Button>

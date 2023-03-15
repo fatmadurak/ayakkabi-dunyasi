@@ -12,17 +12,21 @@ const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BasketContextProvider>
-   <AuthContextProvider>
-    <ChakraProvider>
+
+ 
+   
     <QueryClientProvider client={queryClient}>
-     
+    <ChakraProvider>
+    <AuthContextProvider>
+    <BasketContextProvider>
     <App />
-    
-    </QueryClientProvider>
-    </ChakraProvider>
-    </AuthContextProvider>
     </BasketContextProvider>
+    </AuthContextProvider>
+    </ChakraProvider>
+    </QueryClientProvider>
+   
+ 
+  
   </React.StrictMode>
 );
 

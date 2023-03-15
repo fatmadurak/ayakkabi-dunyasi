@@ -295,16 +295,27 @@
   "orders": [
     {
       "id": 1,
-      "address": "Fetih Mahallesi/Konya"
+      "address": "Fetih Mahallesi/Konya",
+      "userName": "Fatma",
+      "basket": 5
     },
     {
-      "id": 2,
-      "address": "Nalçacı Mahallesi/Konya"
+      "address": "Karatay/Konya",
+      "userName": "Yusuf",
+      "basket": 4,
+      "id": 2
+    },
+    {
+      "address": "Karatay/Konya",
+      "userName": "Yusuf",
+      "basket": 3,
+      "id": 3
     },
     {
       "address": "Meram Mahallesi/Konya",
-      "id": 3
+      "userName": "Fatma",
+      "basket": 2,
+      "id": 4
     }
- 
   ]
 }

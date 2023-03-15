@@ -16,6 +16,7 @@ import ProtectedRoute from "./Pages/ProtectedRoute";
 import Profile from "./Pages/Profile";
 import Basket from "./Pages/Basket";
 import Admin from "./Pages/Admin";
+
  function App() {
 
   const [showButton, setShowButton] = useState(false);
@@ -59,12 +60,11 @@ import Admin from "./Pages/Admin";
         <Route path="/profile" element={<Profile/>}/>
         <Route  path="/profile"element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
         <Route path="/basket" element={<Basket/>}/>
-        <Route path="/admin" element={<Admin/>}/>
+        <Route path="/admin/*" element={<Admin/>}/>
+
         </Routes>
        
        </div>
-
-  
 
 
      
@@ -99,13 +99,6 @@ import Admin from "./Pages/Admin";
     
        }
      
-
-     
-     
-     
- 
-
- 
 
 
     </Router>

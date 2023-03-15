@@ -19,7 +19,7 @@ function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
 
-console.log(user)
+
 
   
 
