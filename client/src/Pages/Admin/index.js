@@ -13,8 +13,7 @@ function Admin() {
 <Box>
 <Flex justifyContent={"center"} alignItems={"center"} mt="250" gap={5} >
 
-  <Box><Link to="/admin/orders"><Button colorScheme="orange">Siparişler</Button></Link></Box>
-  <Box><Link to="/admin/products"><Button colorScheme="blue">Ürünler</Button></Link></Box>
+ 
 
 
 </Flex>

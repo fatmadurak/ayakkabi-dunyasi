@@ -86,7 +86,7 @@ function AdminProducts() {
     <Flex justifyContent="space-between" alignItems="center" m="15"> <div>
      
     </div><Link to="/admin/products/new"><Button>YENİ ÜRÜN EKLE</Button></Link></Flex>
-   <Table dataSource={data} columns={columns} rowKey="id"/>;
+   <Table  dataSource={data} columns={columns} rowKey="id"/>;
   </div>
  
  

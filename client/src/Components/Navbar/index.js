@@ -115,11 +115,16 @@ function Navbar() {
     {
     user && user.role==="admin" && ( <>
      <li>
-     <Link to={"/admin"}> 
-     <Button colorScheme='yellow'variant='outline' >
+     <Menu >
+     <MenuButton as={Button} style={{background:"goldenrod"}}>
       Admin
-     </Button>
-     </Link>
+     </MenuButton>
+    <MenuList>
+    <Link to={"/admin/orders"}><MenuItem>Siparişler</MenuItem></Link>
+    <Link to={"/admin/products"}> <MenuItem>Ürünler</MenuItem></Link>
+    
+    </MenuList>
+   </Menu>
      </li>
      </>
    ) }
