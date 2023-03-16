@@ -24,22 +24,16 @@ const {data}=useQuery("admin:orders",GetAllOrders)
 
 
 
-
-
-
-
-    
-
   return (
   
-<TableContainer display={"flex"}justifyContent={"center"} alignItems={"center"} m="20" >
+<TableContainer display={"flex"} justifyContent={"center"} alignItems={"center"} m="20" >
   <Table variant='simple'>
     <TableCaption>Admin Siparişler Listesi</TableCaption>
     <Thead>
       <Tr>
         <Th>Address</Th>
         <Th>Kullanıcı Adı</Th>
-        <Th >Satın Alınan Ürün Syısı</Th>
+        <Th >Satın Alınan Ürün Sayısı</Th>
       </Tr>
     </Thead>
     <Tbody>

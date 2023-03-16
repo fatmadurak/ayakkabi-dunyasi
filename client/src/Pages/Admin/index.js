@@ -3,6 +3,8 @@ import {Box,Button,Flex} from "@chakra-ui/react"
 import { Link, Routes,Route } from 'react-router-dom'
 import AdminOrders from './AdminOrders'
 import AdminProducts from './AdminProducts'
+import NewProduct from './NewProduct'
+import AdminProductDetail from './AdminProductDetail'
 
 function Admin() {
   return (
@@ -22,7 +24,8 @@ function Admin() {
 
 <Route path="/orders"  element={<AdminOrders/>}/>
 <Route path="/products" exact  element={<AdminProducts/>}/>
-
+<Route path='/products/new'  element={<NewProduct/>}/>
+<Route path='/products/:product_id' element={<AdminProductDetail/>}/>
 </Routes>
 
 
