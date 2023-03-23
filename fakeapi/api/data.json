@@ -49,16 +49,14 @@
       ]
     },
     {
-      "id": 5,
-      "title": "Provoq",
-      "category": 2,
+      "title": "Provoqe",
       "description": "Siyah Kadın Bot",
       "price": "300",
       "images": [
         "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0115821_provoq-siyah-kadin-bot-4498221770100.jpeg",
-        "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0109946_provoq-siyah-kadin-bot-4498221770100.jpeg",
-        "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0109947_provoq-siyah-kadin-bot-4498221770100.jpeg"
-      ]
+        "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0109946_provoq-siyah-kadin-bot-4498221770100.jpeg"
+      ],
+      "id": 5
     },
     {
       "id": 6,

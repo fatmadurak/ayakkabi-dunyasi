@@ -4,6 +4,7 @@ import { Flex,Box, FormControl, FormLabel,Input, Button} from '@chakra-ui/react'
 import { postProduct } from '../../../Api';
 import { useMutation,useQueryClient} from 'react-query';
 import { message } from 'antd';
+import validations from "./validations"
 function NewProduct() {
  
   const queryClient=useQueryClient();
@@ -48,6 +49,7 @@ function NewProduct() {
     <Formik
   initialValues={{ title: '', description: '',price:'',images:[]}}
  
+  validationSchema={validations}
  
   onSubmit={handleSubmit}
 >
