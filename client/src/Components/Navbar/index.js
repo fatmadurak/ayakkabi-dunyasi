@@ -133,7 +133,7 @@ function Navbar() {
     { loggedIn && 
       <>
 
-    <li><Link to={"profile"}> <Menu>
+    <li> <Menu>
   <MenuButton as={Button} colorScheme="purple">Profile</MenuButton > <MenuList>
     <MenuItem minH='48px'>
       <Image
@@ -143,7 +143,7 @@ function Navbar() {
         alt='Fluffybuns the destroyer'
         mr='12px'
       />
-     <Link to={"/profile"}> <span>{ user.userName}</span></Link>
+     <Link to={"#"}> <span>{ user.userName}</span></Link>
     </MenuItem>
     <MenuItem minH='40px'>
       <Image
@@ -153,7 +153,7 @@ function Navbar() {
       />
       <span onClick={logoutUser}>Çıkış Yap</span>
     </MenuItem>
-  </MenuList></Menu></Link></li>
+  </MenuList></Menu></li>
 
 
 
