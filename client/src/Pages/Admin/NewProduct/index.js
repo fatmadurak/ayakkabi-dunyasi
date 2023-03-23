@@ -14,26 +14,31 @@ function NewProduct() {
    
     },)
 
- const handleSubmit=async({values,bag})=>{
-
-  message.loading({content:"Loading...",key:"product_add"})
+    const handleSubmit=async(values,bag)=>{
 
 
-  const newValues={
-
-    ...values,
-    images:JSON.stringify(values.images)
-
-
-}
-newProductMutation.mutate(newValues, {
-  onSuccess: () => {
-    console.log("success");
-  },
-})
-
-
- }
+      message.loading({content:"Loading...",key:"product_add"})
+  
+  
+  
+      const newValues={
+  
+          ...values,
+          image:JSON.stringify(values.image)
+  
+  
+      }
+  
+  
+      newProductMutation.mutate(newValues, {
+          onSuccess: () => {
+            console.log("success");
+          },
+      })
+    
+  
+  
+  }
  
  return(
  
@@ -61,7 +66,7 @@ newProductMutation.mutate(newValues, {
     <FormControl>
     <FormLabel>Ürün Başlığı:</FormLabel>
     <Input
-             type="title"
+       
              name="title"
              onChange={handleChange}
              onBlur={handleBlur}
@@ -74,7 +79,7 @@ newProductMutation.mutate(newValues, {
     <FormControl>
     <FormLabel>Ürün Tanımı:</FormLabel>
     <Input
-             type="description"
+
              name="description"
              onChange={handleChange}
              onBlur={handleBlur}
@@ -89,7 +94,7 @@ newProductMutation.mutate(newValues, {
     <FormControl>
     <FormLabel>Ürün Fiyatı:</FormLabel>
     <Input
-             type="price"
+     
              name="price"
              onChange={handleChange}
              onBlur={handleBlur}
@@ -98,6 +103,8 @@ newProductMutation.mutate(newValues, {
            {errors.price && touched.price && errors.price}
   
     </FormControl>
+
+ 
 
     <FormControl mt={4}>
 
