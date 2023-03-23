@@ -16,6 +16,7 @@ import ProtectedRoute from "./Pages/ProtectedRoute";
 import Profile from "./Pages/Profile";
 import Basket from "./Pages/Basket";
 import Admin from "./Pages/Admin";
+import Footer from "./Components/Footer"
 
 
  function App() {
@@ -97,7 +98,8 @@ import Admin from "./Pages/Admin";
        }
      
 
-
+  
+  <Footer/>
     </Router>
     </>
   );

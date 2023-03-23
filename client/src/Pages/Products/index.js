@@ -42,7 +42,7 @@ function AllProducts() {
         value={search}
         onChange={handleSearch}
         focusBorderColor="#84A59D"
-        width={"68%"}
+        width={"60%"}
       />
 
 </Box>
@@ -50,16 +50,33 @@ function AllProducts() {
 
    <Box className='content'>
 
-   <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="10" justifyContent="center" alignItems="center" >
+{
+  search !==""?
+
+  <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="10" justifyContent="center" alignItems="center" >
    
-   {
-         filteredData &&
-         filteredData.map((item,key) =>(<Card item={item} key={item.id}/>)
-        )
+  {
+        filteredData &&
+        filteredData.map((item,key) =>(<Card item={item} key={item.id}/>)
+       )
 
-   }
+  }
+ 
 
-   </Grid>
+  </Grid>
+
+  :
+  <Grid templateColumns="repeat(4, 1fr)" mt="10" gap={6}>
+  {data &&
+    data.map((item, i) => (
+      <Box w="100%" key={i}>
+        <Card item={item} />
+      </Box>
+    ))}
+</Grid>
+
+
+}
   
 
    </Box>
