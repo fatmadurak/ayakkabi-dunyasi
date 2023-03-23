@@ -45,7 +45,7 @@ try {
 }
 
   return (
-    <div>
+    <Box  justifyContent={"center"} alignItems={"center"}m={10}>
  
   <Text fontSize="2xl">Edit</Text>
 
@@ -109,12 +109,12 @@ try {
       name="images"
       render={(arrayHelpers)=>
     
-         <div>
+         <Box >
             {
 
                 values.images && values.images.map((image,index)=>
                 
-                 <div key={index}>
+                 <Box key={index} mt={2}>
                     <Input  name={`images.${index}`}
                      value={image}
                      disabled={isSubmitting}
@@ -125,7 +125,7 @@ try {
                     />
 
                     <Button ml="4" type='button' colorScheme="red" onClick={()=>arrayHelpers.remove(index)}>Remove</Button>
-                 </div>
+                 </Box>
                 
                 )
             }
@@ -137,7 +137,7 @@ try {
 
 
 
-         </div>
+         </Box>
     
     
     }
@@ -176,7 +176,7 @@ try {
   </Formik>
 
 
-    </div>
+    </Box>
   )
 }
 
