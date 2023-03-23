@@ -9,18 +9,16 @@ import { Button,Box,Text,  Menu,
   MenuItemOption,
   MenuGroup,
   MenuOptionGroup,
-  MenuDivider,Image} from '@chakra-ui/react';
+  MenuDivider,Image, useQuery} from '@chakra-ui/react';
 import {UseAuthContext} from "../../context/AuthContext"
 import { useNavigate } from 'react-router-dom';
 import { UseBasketContext } from '../../context/BasketContext';
 
 
+
 function Navbar() {
 
   const {loggedIn,user,logout}=UseAuthContext()
-
-
-
   
 
   const{basket}=UseBasketContext()

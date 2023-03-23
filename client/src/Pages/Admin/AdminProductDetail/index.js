@@ -124,7 +124,7 @@ try {
                     
                     />
 
-                    <Button ml="4" type='button' colorScheme="red" onClick={()=>arrayHelpers.remove(index)}>Remove</Button>
+                    <Button ml="4" type='button' colorScheme="yellow" onClick={()=>arrayHelpers.remove(index)}>Remove</Button>
                  </Box>
                 
                 )
@@ -133,7 +133,7 @@ try {
 
 
    
-        <Button mt={5} onClick={()=>arrayHelpers.push("")}> Add a image</Button>
+        <Button mt={5} onClick={()=>arrayHelpers.push("")}  colorScheme="purple" > Add a image</Button>
 
 
 
@@ -147,7 +147,7 @@ try {
       </FormControl>
 
 
-     <Button mt={4} width="full" type='submit' isLoading={isSubmitting}> Update</Button>
+     <Button mt={4} width="full" type='submit' isLoading={isSubmitting} colorScheme="green" > Update</Button>
 
      </form>
 

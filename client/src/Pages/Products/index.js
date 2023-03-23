@@ -5,13 +5,24 @@ import { Box,Flex,Grid,Input,Buttton } from '@chakra-ui/react'
 import {FetchProductList} from "../../Api"
 import  Card  from "../../Components/Card.js"
 import "./index.css"
-import { Button } from 'antd'
+
 
 function AllProducts() {
 
-  const [search,SetSearch]=useState("")
+  const [search,setSearch]=useState("")
+  const [filteredData, setFilteredData] = useState([]); 
   const { isLoading, error, data } = useQuery("products",FetchProductList)
    
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    const newFilter = data.filter((item) => {
+      return item.description
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+    });
+    setFilteredData(newFilter);
+  };
   if (isLoading) return 'Loading...'
  
   if (error) return 'An error has occurred: ' + error.message
@@ -22,18 +33,28 @@ function AllProducts() {
   return (
    <>
 
-    {/* <Box justifyContent="center" alignItems="center" mt={200}>
+<Box mt={250} justifyContent={"center"} alignItems={"center"} textAlign="center">
 
-      <Input color="red" size="l"/>
-    </Box> */}
+<Input
+        variant="filled"
+        placeholder="Aramak istediğiniz ürünü yazınız.."
+        _placeholder={{ opacity: 1, color: "gray.500" }}
+        value={search}
+        onChange={handleSearch}
+        focusBorderColor="#84A59D"
+        width={"68%"}
+      />
+
+</Box>
 
 
    <Box className='content'>
-   
-   <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="280" justifyContent="center" alignItems="center" >
+
+   <Grid templateColumns="repeat(4,1fr)"  gap={20} mt="10" justifyContent="center" alignItems="center" >
    
    {
-         data.map((item,key) =>(<Card item={item} key={item.id}/>)
+         filteredData &&
+         filteredData.map((item,key) =>(<Card item={item} key={item.id}/>)
         )
 
    }
