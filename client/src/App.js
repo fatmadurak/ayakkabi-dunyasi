@@ -66,7 +66,6 @@ import Admin from "./Pages/Admin";
        
        </div>
 
-
      
        {
      
@@ -82,9 +81,6 @@ import Admin from "./Pages/Admin";
             Yukarı Çık
           </button>
          
-
-
-
 
 
            )  }

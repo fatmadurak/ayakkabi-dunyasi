@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 
+
 const validation = Yup.object({
     userName:Yup.string().required(),
     email:Yup.string().required(), 
@@ -7,5 +8,6 @@ const validation = Yup.object({
     passwordConfirmation: Yup.string()
        .oneOf([Yup.ref('password'), null], 'Passwords must match')
 });
+
 
 export default validation
