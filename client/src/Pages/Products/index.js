@@ -38,7 +38,7 @@ function AllProducts() {
 <Input
         variant="filled"
         placeholder="Aramak istediğiniz ürünü yazınız.."
-        _placeholder={{ opacity: 1, color: "gray.500" }}
+        _placeholder={{ opacity: 1, color: "purple.500" }}
         value={search}
         onChange={handleSearch}
         focusBorderColor="#84A59D"

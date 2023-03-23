@@ -13,16 +13,13 @@ function Footer() {
         <Grid
           width="100%"
           templateColumns={[
-            "repeat(1, 1fr)",
-            "repeat(2, 1fr)",
-            "repeat(3, 1fr)",
             "repeat(4, 1fr)",
           ]}
           gap={6}
           pt="8"
           justifyContent={"space-between"}
-          justifyItems={"stretch"}
-          columns={[2, null, 3]}
+        
+          
         >
           <GridItem padding={"0.5rem"}>
             <Box>
