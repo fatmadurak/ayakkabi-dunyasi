@@ -1,9 +1,9 @@
 import React from 'react'
-import { Formik ,FieldArray} from 'formik';
-import { Flex,Box, FormControl, FormLabel,Input} from '@chakra-ui/react';
+import { Formik ,FieldArray,Field} from 'formik';
+import { Flex,Box, FormControl, FormLabel,Input, Button} from '@chakra-ui/react';
 import { postProduct } from '../../../Api';
 import { useMutation,useQueryClient} from 'react-query';
-
+import { message } from 'antd';
 function NewProduct() {
  
   const queryClient=useQueryClient();
@@ -16,7 +16,21 @@ function NewProduct() {
 
  const handleSubmit=async({values,bag})=>{
 
+  message.loading({content:"Loading...",key:"product_add"})
 
+
+  const newValues={
+
+    ...values,
+    images:JSON.stringify(values.images)
+
+
+}
+newProductMutation.mutate(newValues, {
+  onSuccess: () => {
+    console.log("success");
+  },
+})
 
 
  }
@@ -24,7 +38,7 @@ function NewProduct() {
  return(
  
  
- <Flex justifyContent="center" alignItems="center" >
+ <Box justifyContent="center" alignItems="center"  m={20}>
 
     <Formik
   initialValues={{ title: '', description: '',price:'',images:[]}}
@@ -58,7 +72,7 @@ function NewProduct() {
     </FormControl>
 
     <FormControl>
-    <FormLabel>Ürün Tanımı::</FormLabel>
+    <FormLabel>Ürün Tanımı:</FormLabel>
     <Input
              type="description"
              name="description"
@@ -73,7 +87,7 @@ function NewProduct() {
 
 
     <FormControl>
-    <FormLabel>Ürün Fiyatı::</FormLabel>
+    <FormLabel>Ürün Fiyatı:</FormLabel>
     <Input
              type="price"
              name="price"
@@ -85,39 +99,58 @@ function NewProduct() {
   
     </FormControl>
 
-    <FieldArray
-     name="images"
-     render={arrayHelpers => (
-       <div>
-         {values.images.map((image, index) => (
-           <div key={index}>
-             {/** both these conventions do the same */}
-             <Input name={`images.${index}`} value={image} onChange={handleChange}
-             onBlur={handleBlur} />
-           
- 
-             <button type="button" onClick={() => arrayHelpers.remove(index)}>
-              Sil
-             </button>
-           </div>
-         ))}
-         <button
-           type="button"
-           onClick={() => arrayHelpers.push('')}
-         >
-           Ekle
-         </button>
-       </div>
-     )}
-   />
+    <FormControl mt={4}>
+
+      <FormLabel>Ürün Görüntüleri: </FormLabel>
+      <FieldArray
+      
+      name="images"
+      render={(arrayHelpers)=>
+    
+         <div>
+            {
+
+                values.images && values.images.map((image,index)=>
+                
+                 <div key={index}>
+                    <Input  name={`images.${index}`}
+                     value={image}
+                     disabled={isSubmitting}
+                     onChange={handleChange}
+                     width="3xl"
+                    
+                    
+                    />
+
+                    <Button ml="4" type='button' colorScheme="red" onClick={()=>arrayHelpers.remove(index)}>Sil</Button>
+                 </div>
+                
+                )
+            }
+
 
 
    
-    <button type="submit" isLoading={isSubmitting}>Kaydet</button>
+        <Button mt={5} onClick={()=>arrayHelpers.push("")} colorScheme="purple"> Görüntü ekle</Button>
+
+
+
+         </div>
+    
+    
+    }
+      
+      />
+
+      </FormControl>
+
+
+   
+    <Button type="submit" mt={5} colorScheme="green">Kaydet</Button>
     </form>
   )}
 </Formik>
-  </Flex>
+  </Box>
 )}
 
 export default NewProduct
