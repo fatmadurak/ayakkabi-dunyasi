@@ -47,7 +47,7 @@ try {
   return (
     <Box  justifyContent={"center"} alignItems={"center"}m={10}>
  
-  <Text fontSize="2xl">Edit</Text>
+  <Text fontSize="2xl">Ürün Güncelle</Text>
 
   <Formik
   initialValues={{
@@ -80,7 +80,7 @@ try {
   
       <FormControl>
 
-        <FormLabel>Title </FormLabel>
+        <FormLabel>Başlık </FormLabel>
         <Input name="title" onChange={handleChange} onBlur={handleBlur} value={values.title} disabled={isSubmitting} isInvalid={touched.title && errors.title}/>
       </FormControl>
     
@@ -88,7 +88,7 @@ try {
     
       <FormControl mt={4}>
 
-        <FormLabel>Description </FormLabel>
+        <FormLabel>Tanım </FormLabel>
         <Textarea name="description" onChange={handleChange} onBlur={handleBlur} value={values.description} disabled={isSubmitting} isInvalid={touched.description && errors.description}/>
       </FormControl>
       
@@ -96,14 +96,14 @@ try {
 
       <FormControl mt={4}>
 
-        <FormLabel>Price </FormLabel>
+        <FormLabel>Fiyat </FormLabel>
         <Input name="price" onChange={handleChange} onBlur={handleBlur} value={values.price} disabled={isSubmitting} isInvalid={touched.price && errors.price}/>
       </FormControl>
 
 
       <FormControl mt={4}>
 
-      <FormLabel>images </FormLabel>
+      <FormLabel>Görüntüler</FormLabel>
       <FieldArray
       
       name="images"
@@ -124,7 +124,7 @@ try {
                     
                     />
 
-                    <Button ml="4" type='button' colorScheme="yellow" onClick={()=>arrayHelpers.remove(index)}>Remove</Button>
+                    <Button ml="4" type='button' colorScheme="yellow" onClick={()=>arrayHelpers.remove(index)}>Sil</Button>
                  </Box>
                 
                 )
@@ -133,7 +133,7 @@ try {
 
 
    
-        <Button mt={5} onClick={()=>arrayHelpers.push("")}  colorScheme="purple" > Add a image</Button>
+        <Button mt={5} onClick={()=>arrayHelpers.push("")}  colorScheme="purple" > Görüntü Ekle</Button>
 
 
 
@@ -147,7 +147,7 @@ try {
       </FormControl>
 
 
-     <Button mt={4} width="full" type='submit' isLoading={isSubmitting} colorScheme="green" > Update</Button>
+     <Button mt={4} width="full" type='submit' isLoading={isSubmitting} colorScheme="green" > Güncelle</Button>
 
      </form>
 

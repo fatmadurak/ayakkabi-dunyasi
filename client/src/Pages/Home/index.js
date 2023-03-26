@@ -132,48 +132,6 @@ function Home() {
 
 
 
-  {/* <Box className='footerContainer'>
-
-<Grid  className='footer' templateColumns="repeat(4,1fr)" justifyContent={"center"} alignItems={"center"} >
-
- <Box>
-  <Text size={"xl"} >Ayakkabı Satış</Text>
-
-   <ul>
-    <li> <Link>Biz Kimiz</Link> </li>
-    <li><Link>Vizyon & Misyon</Link></li>
-    <li> <Link>İş Ortaklarımız</Link></li>
-   </ul> 
-  
- </Box>
-
- <Box>
- <Text size={"xl"} >Sosyal Medya</Text>
-
- <li> <Button width={"full"}>Facebook</Button></li>
- 
- <li> <Button  width={"full"}>Twitter</Button></li>
-  
- </Box>
-
- <Box>
-
-3
-  
- </Box>
-
- <Box>
-
-4
-  
-</Box>
-</Grid>
-
-
-
-</Box> */}
-
-
    </Box>
   
   

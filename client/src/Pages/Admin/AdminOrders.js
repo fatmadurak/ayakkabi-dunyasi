@@ -31,7 +31,7 @@ const {data}=useQuery("admin:orders",GetAllOrders)
     <TableCaption>Admin Siparişler Listesi</TableCaption>
     <Thead>
       <Tr>
-        <Th>Address</Th>
+        <Th>Adres</Th>
         <Th>Kullanıcı Adı</Th>
         <Th >Satın Alınan Ürün Sayısı</Th>
       </Tr>
