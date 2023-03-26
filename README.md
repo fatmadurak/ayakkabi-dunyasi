@@ -1,5 +1,5 @@
-# ayakkabi-dunyasi
-# React-Ayakkabı Dünyası
+
+# Ayakkabı Dünyası
 * ```MockAPI``` ile fake JSON dosyası oluşturularak veriler axios ile çekildi. [https://mockapi.io](https://mockapi.io)
 * Projede ```Context API ``` kullanıldı.
 * Yeni üye girişi ve kayıt olunmuşsa giriş yapabilme, profil sayfasında profil bilgilerine erişebilme, sepete ürün ekleme, sepetten kaldırma,ürün arama, sipariş verebilme ,sepete eklenen ürünler ```local storage ```'a kaydolmaktadır, ürün detayını görebilme,  çıkış yapıldığında ana sayfaya yönlendirme özellikleri aktif çalışmaktadır. 
