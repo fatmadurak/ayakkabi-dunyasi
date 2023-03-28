@@ -12,7 +12,7 @@
 <img src="client/public/assets/kategory2.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/siparisler.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/adminurunler.PNG" alt="Anasayfa_" width="700" height="300">
-<img src="client/public/assets/kayitol.PNG" alt="Anasayfa_" width="900" height="700">,
+<img src="client/public/assets/kayitol.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/girisYap.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/logout.PNG" alt="Anasayfa_" width="400" height="300">
 <img src="client/public/assets/siparis.PNG" alt="Anasayfa_" width="900" height="700">
