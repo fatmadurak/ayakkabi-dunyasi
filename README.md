@@ -1,4 +1,6 @@
 
+
+
 # Ayakkabı Dünyası
 * ```MockAPI``` ile fake JSON dosyası oluşturularak veriler axios ile çekildi. [https://mockapi.io](https://mockapi.io)
 * Projede ```Context API ``` kullanıldı.
@@ -16,4 +18,3 @@
 <img src="client/public/assets/girisYap.PNG" alt="Anasayfa_" width="900" height="700">
 <img src="client/public/assets/logout.PNG" alt="Anasayfa_" width="400" height="300">
 <img src="client/public/assets/siparis.PNG" alt="Anasayfa_" width="900" height="700">
-
