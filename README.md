@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 5e441cab965b94744ee6f0eaaec16badbf001970
 
 # Ayakkabı Dünyası
 * ```MockAPI``` ile fake JSON dosyası oluşturularak veriler axios ile çekildi. [https://mockapi.io](https://mockapi.io)
