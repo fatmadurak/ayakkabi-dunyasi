@@ -98,8 +98,7 @@ import Footer from "./Components/Footer"
        }
      
 
-  
-  <Footer/>
+  <Footer/> 
     </Router>
     </>
   );
