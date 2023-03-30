@@ -1,16 +1,14 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Eclipse",
-      "category": 1,
+      "title": "Eclipsee",
       "description": "Kahve Kadın Terlik",
       "price": "289",
       "images": [
-        "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105969_eclipse-kahve-kadin-terlik-4358182001020.jpeg",
         "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105970_eclipse-kahve-kadin-terlik-4358182001020.jpeg",
         "https://img-ayakkabidunyasi.mncdn.com/Content/Images/Thumbs/0105972_eclipse-kahve-kadin-terlik-4358182001020.jpeg"
-      ]
+      ],
+      "id": 1
     },
     {
       "id": 2,
@@ -300,7 +298,7 @@
       "role": "user",
       "email": "omer@gmail.com",
       "password": "123",
-      "userName": "ömer", 
+      "userName": "ömer",
       "id": 8
     }
   ],
